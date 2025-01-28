@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #allPage {
+        width: 100%;
+        height: 800px;
+        background-image: url('space2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+       }
+       #joinButton {
+        margin-top: 50px;
+        margin-left: 50px;
+       }
+       #planets {
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100px;
+       }
+       #leftPlanet {
+       width: 400px; 
+       height: 230px;
+       }
+       #planetsTexts {
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+       }
+       #leftText {
+        color: white;
+        font-weight: 900;
+        width: 300px;
+        margin-left: 250px;
+        line-height: 1.5;
+        font-family: 'Times New Roman', Times, serif;
+       }
+       #rightText {
+        color: white;
+        width: 300px;
+        font-weight: 900;
+        margin-left: 250px;
+        line-height: 1.5;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 450px;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <div id="allPage">
+        
+        <button id="joinButton" >Начать слияние</button>
+        <div id="planets">
+            <img src="левая-Photoroom (1).png" alt="" id="leftPlanet">
+            <img src="правая-Photoroom.png" alt="" id="rightPlanet">
+
+        </div>
+        <div id="planetsTexts">
+            <div id="leftText">Это планета Ллоылф122. Условия там так себе - летом температура +600, а зимой -130. Не советую. Зря я туда поехал на прошлых новогодних. За такие деньги лучше бы слетел в Дубай.</div>
+            <div id="rightText">
+                Это планета 7авл7. Там много вулканов, кратеров и морей. Есть на что посмотреть, сделал много фото. Прилечу еще раз как-нибудь. Всем советую.</div>
+        </div>
+    </div>
+    <script>
+        const leftPlanet = document.querySelector("#leftPlanet");
+    const rightPlanet = document.querySelector("#rightPlanet");
+    const button = document.querySelector("#joinButton");
+
+    button.addEventListener("click", function joinPlanets() {
+        let leftPosition = 0;
+        let rightPosition = 0;
+
+        const interval = setInterval(() => {
+            leftPosition += 10;
+            rightPosition += 10;
+
+            leftPlanet.style.transform = `translateX(${leftPosition}px)`;
+            rightPlanet.style.transform = `translateX(-${rightPosition}px)`;
+
+            if (leftPosition >= 370) {
+                clearInterval(interval);
+                console.log("Planets have joined!");
+                leftPlanet.style.display = "none"
+                rightPlanet.style.display = "none"
+                let bigPlanet = document.createElement("img")
+                bigPlanet.src = "sun2-Photoroom.png"
+                bigPlanet.style.width = "400px"
+                bigPlanet.style.height = "230px"
+                let planets = document.querySelector("#planets")
+                planets.appendChild(bigPlanet)
+            }
+        }, 50);
+    });
+        
+    </script>
+</body>
+</html>

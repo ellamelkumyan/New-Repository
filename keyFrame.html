@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Animation</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .newDiv {
+            position: absolute;
+            height: 2px;
+            width: 2px;
+            background-color: white;
+            animation: toBottomRight 5s linear infinite;
+        }
+
+        @keyframes toBottomRight {
+            to {
+                transform: translate(calc(100vw - var(--x)), calc(100vh - var(--y)));
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes toTopRight {
+            to {
+                transform: translate(calc(100vw - var(--x)), calc(0px - var(--y)));
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('click',()=>{
+            console.log('Клик по странице!'); 
+
+divsArray.forEach((div) => {
+    const currentX = parseFloat(div.style.left);
+    const currentY = parseFloat(div.style.top);
+
+    
+    div.style.animation = "none";
+    void div.offsetWidth; 
+
+   
+    div.style.setProperty("--x", currentX + "px");
+    div.style.setProperty("--y", currentY + "px");
+
+    
+    div.style.animation = "toTopRight 3s linear forwards";
+});
+
+
+divsArray.length = 0;
+            
+        })
+        const body = document.body;
+        const divsArray = [];
+
+      
+        function createSquare() {
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("newDiv");
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            newDiv.style.left = `${startX}px`;
+            newDiv.style.top = `${startY}px`;
+
+         
+            newDiv.style.setProperty("--x", startX + "px");
+            newDiv.style.setProperty("--y", startY + "px");
+
+            body.appendChild(newDiv);
+            divsArray.push(newDiv);
+        }
+
+     
+        setInterval(createSquare, 100);
+
+        
+        body.addEventListener("click", function() {
+          
+        });
+    </script>
+</body>
+</html>
