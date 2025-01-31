@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let obj = {
+            name: "Vasya",
+            age: 30,
+
+        }
+        let descriptor = Object.getOwnPropertyDescriptor(obj, "name")
+        console.log(descriptor)
+
+        let user2 = {
+
+        }
+        Object.defineProperty(user2, "name", {value: "Vasya"})
+        let descriptor2 = Object.getOwnPropertyDescriptor(user2, "name")
+        console.log(descriptor2)
+        Object.defineProperty(user2, "age", {value: 30})
+        for (let i in obj) {console.log(obj[i])}
+        for (let i in user2) {console.log(user2[i])}
+        const values = Object.values(user2)
+        console.log(values)*/ 
+
+
+        /*let obj = new Object ({
+            name: "Vasya",
+            age: 30
+
+        })
+        let prohibit = Object.seal(obj) //запрещает изменение
+        console.log(prohibit)
+        prohibit.city = "Moscow"
+        console.log(prohibit)
+        obj.city = "Moscow"
+
+        Object.preventExtensions(obj)
+
+        let freeze = Object.freeze(obj)
+        freeze.city = "New York"
+        freeze.name = "Kate"
+        console.log(freeze)
+        obj.age = 20
+        console.log(obj)
+        let isExtensible = Object.isExtensible(freeze)
+        console.log(isExtensible)*/ 
+        
+        
+
+/*Запрещает добавлять новые свойства в объект.
+Object.seal(obj)
+Запрещает добавлять/удалять свойства. Устанавливает configurable: false для всех существующих свойств.
+Object.freeze(obj)
+Запрещает добавлять/удалять/изменять свойства. Устанавливает configurable: false, writable: false для всех существующих свойств.
+А также есть методы для их проверки:
+
+Object.isExtensible(obj)
+Возвращает false, если добавление свойств запрещено, иначе true.
+Object.isSealed(obj)
+Возвращает true, если добавление/удаление свойств запрещено и для всех существующих свойств установлено configurable: false.
+Object.isFrozen(obj)
+Возвращает true, если добавление/удаление/изменение свойств запрещено, и для всех текущих свойств установлено configurable: false, writable: false.*/
+
+
+/*let spaceship = {
+    name: "PALETELI",
+    speed: "MNOGA"
+}
+
+Object.defineProperty(spaceship, "speed", {
+enumerable: true,
+writable: true,
+})
+
+Object.defineProperty(spaceship, "name", {
+enumerable: false,
+writable: false,
+
+})*/ 
+
+
+/*let mission = {
+    destination: "Mars"
+}
+Object.seal(mission)
+delete mission.destination 
+console.log(mission)*/ 
+
+
+/*let planet = {
+    name: "Pluto"
+}
+Object.freeze(planet)
+planet.name = "Jupiter"
+console.log(planet)*/ 
+
+
+
+/*let asteroid = {
+    coordinates: 1000
+}
+Object.defineProperty(asteroid, "coordinates", {
+    enumerable: false
+})
+
+for (let i in asteroid) {
+    console.log(asteroid[i])
+}*/ 
+
+
+/*let spaceStation = {
+    powerLevel: 50
+}
+spaceStation.get = function() {
+    console.log(spaceStation.powerLevel)
+}
+spaceStation.set = function() {
+    if (0<spaceStation.powerLevel>100) {
+        console.log(spaceStation.powerLevel)
+    }
+    else {
+        console.log("Нельзя")
+    }
+}*/ 
+
+
+
+
+
+    </script>
+</body>
+</html>

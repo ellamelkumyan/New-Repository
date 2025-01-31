@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*async function showOne() {
+           let promise = new Promise(function(resolve, reject) {
+            return resolve(1)
+           })
+           return promise
+        }
+         showOne().then(console.log)*/ 
+
+
+         /*async function showOK () {
+            let result = new Promise(function(resolve, reject) {
+                setTimeout(function(){
+                    resolve("OK")
+                })
+
+            }, 1000)
+            let myResult = await result
+            console.log(myResult)
+        }
+        showOK ()*/ 
+
+
+       /* class Tick {
+            constructor(number) {
+                this.number = number
+            }
+            then(resolve, reject) {
+                console.log(resolve)
+                setTimeout(() => resolve(this.number+1)
+                , 1000)
+            }
+        }
+        async function showTick () {
+            const myTick = await new Tick(0)
+            console.log(myTick)
+
+        }
+        showTick ()*/ 
+
+
+
+        /*function checkEvenNumber (number) {
+            return new Promise (function(resolve, reject) {
+                if (number % 2 === 0) {
+                    resolve(`Число четное: ${number}`)
+                }
+                else {
+                    reject(`Число нечетное: ${number}`)
+                }
+            })
+        }
+        checkEvenNumber (4)
+        .then(function(result) {
+            console.log(result)
+        })
+        .catch(function(error) {
+            console.error("Ошибка:", error)
+        })
+
+        checkEvenNumber (7)
+        .then(function(result) {
+            console.log(result)
+        })
+        .catch(function(error) {
+            console.error("Ошибка:", error)
+        })*/
+
+
+        /*async function getUserName(id) {
+            return new Promise (function(resolve, reject) {
+                
+                    if(id === 1) {
+                        resolve ("Anna")
+                    }
+                    else if (id === 2) {
+                        resolve ("Maxim")
+                    }
+                    else {
+                        reject("Пользователь не найден")
+                    }
+                }
+            )
+        }
+        async function fetchUserName() {
+    try {
+        const result = await getUserName(2); 
+        console.log(result);
+    } catch (error) {
+        console.error("Ошибка:", error);
+    }
+
+    try {
+        const result = await getUserName(3);  
+        console.log(result);
+    } catch (error) {
+        console.error("Ошибка:", error);
+    }
+}
+
+fetchUserName();*/ 
+
+
+        /*function fetchUser(){
+            return new Promise (function(resolve, reject) {
+                setTimeout(function() {
+                resolve ({id: 1, name: "Anna"})
+                }, 2000)
+            })
+        }
+        function fetchOrders(userId){
+            return new Promise (function(resolve, reject) {
+                setTimeout(function() {
+                resolve ([1001, 1002, 1003])
+                }, 1000)
+            })
+        }
+        /*async function myFunction() {
+            fetchUser(1)
+            fetchOrders(1001)
+        }
+        console.log(myFunction())*/ 
+
+
+        /*async function myFunction() {
+            try{
+                let user = await fetchUser()
+                console.log(user)
+                let order = await fetchOrders(user.Id)
+                console.log(order)
+            }
+            catch(error) {
+                console.error("Ошибка:", error)
+            }
+        }
+        myFunction()*/ 
+
+
+        
+
+
+
+
+    
+        
+
+    </script>
+</body>
+</html>

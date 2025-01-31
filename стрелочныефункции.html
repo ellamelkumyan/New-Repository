@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+/*let name = prompt()
+let greetings = (name) => `${name}, привет`
+
+
+function newGreetings (name) {
+return `${name}, привет`
+}
+newGreetings (name)*/ 
+
+
+
+/*function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+   () => {alert("Вы согласились.")},
+   () => {alert("Вы отменили выполнение.")}
+
+);*/ 
+
+
+
+/*let obj = {
+    name: "John",
+    countries: ["Russia", "the USA", "France"],
+    showCountries: function () {
+        for (let i in this.countries) {
+        alert(this.countries[i]) }
+    },
+    showCountries2(){this.countries.forEach((item) => console.log(item)) } ЧТО ТУТ ДЕЛАЕМ
+
+}
+obj.showCountries()
+obj.showCountries2()*/ 
+
+
+
+
+
+
+
+
+/*function sum (a, b) {
+    return a+b
+}
+sum(1, 3)
+
+let mySum = (a, b) => a+b
+mySum(2, 4)*/  
+
+
+
+
+/*let count = 0
+let x = setInterval(function(){
+    if (count < 3) {
+    alert("Привет")}
+    else {
+        clearInterval(x)
+    }
+}, 3000)*/ 
+
+
+//setTimeout(function(){alert("Пока")}, 3000)
+
+
+
+/*let count2 = 0 
+let y = setInterval(() => {
+if (count2 < 5) {
+    console.log(count2)
+    count2++
+}
+else {
+    clearInterval(y)
+}
+}, 5000)*/ 
+
+
+
+/*let count = 0
+let number = prompt().split(',')
+let number1 = number[0] //сколько раз
+let number2 = number[1] // c какой задержкой 
+let interval = setInterval(function() {
+    if (count < number[0]) {
+    console.log("Привет")
+    count++}
+    else {
+        clearInterval(interval)
+    }
+}, (number[1]*1000))*/ 
+
+
+
+/*let num = +prompt()
+let square = (num) => num**2
+console.log(square(num))*/ 
+
+
+
+/*let num1 = +prompt()
+let num2 = +prompt()
+let multiply = (num1, num2) => num1*num2 
+console.log(multiply(num1, num2))*/ 
+
+
+
+/*let num = +prompt()
+let isEven = (num) => {
+    if (num % 2 === 0) {
+        console.log(true)
+    }
+    else {
+        console.log(false)
+    }
+}
+isEven(num)*/ 
+
+
+
+/*let num1 = +prompt()
+let num2 = +prompt()
+let operation = prompt()
+let calculate = (num1, num2, operation) => {
+    if (operation === "+") {
+        console.log(num1 + num2)
+    }
+    else if (operation === "-") {
+        console.log(num1 - num2)
+    }
+    else if (operation === "/") {
+        console.log(num1 / num2)
+    }
+    else {
+        console.log(num1 * num2)
+    }
+}
+calculate(num1, num2, operation)*/ 
+
+
+
+
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let evenNumber = numbers.filter(item => {
+    if (item % 2 === 0) {
+        return item
+    }
+})
+console.log(evenNumber)*/ 
+
+
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let squares = numbers.map(item => {
+    return item ** 2
+})
+console.log(squares)*/ 
+
+
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+console.log(sum)*/ 
+
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let x = numbers.reduce(function(a,b) {
+    return a+b
+}, 0) 
+console.log(x)*/ 
+
+
+
+
+//let name = prompt()
+/*let obj = {
+    hello: function(name) {
+        console.log(`Привет, ${name}`)
+    },
+    goodbye: function(name) {
+        console.log(`Пока, ${name}`)
+    },
+    name1: function() {
+        let name = prompt("Как тебя зовут?")
+        return name
+    }
+};
+/*obj.hello(name)
+obj.goodbye(name)*/ 
+
+/*function howAreYou(name) {
+console.log(`Как дела, ${name}`)
+}
+howAreYou(obj.name1())
+setTimeout(howAreYou, 120000)*/
+
+
+
+
+
+/*function showTime() {
+    let time = new Date()
+    console.log(time.getHours() + ":" +  time.getMinutes() + ":" + time.getSeconds())
+
+}
+setInterval(showTime, 1000)*/ 
+
+
+
+/*let start = Date.now()
+let number = 12
+function square(number) {
+return number ** 50000000 
+}
+square(number)
+let end = Date.now()
+console.log(end - start)
+function square(number) {
+    let result = number
+    for (let i = 1; i<=50000000; i++) {
+        result = result * number
+        
+    }
+    return result
+}
+let end2 = Date.now()
+console.log(end2 - start)*/ 
+
+
+/*let time = new Date()
+console.log(time)*/  
+
+
+
+/*function getLastDayOfMonth(year, month) {
+    const nextMonthFirstDay = new Date(year, month + 1, 1);
+    const lastDayOfMonth = new Date(nextMonthFirstDay - 1);
+    return lastDayOfMonth.getDate();
+
+}
+console.log(getLastDayOfMonth(2012, 10))*/ 
+
+
+
+/*function getSecondsToday() {
+  const now = new Date()
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const diff = now - today
+  return Math.round(diff / 1000)
+}
+
+console.log(getSecondsToday())*/ 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

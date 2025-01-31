@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function memorize(a) {
+    let cache = new Map();
+    return function (...args) {
+        let key = JSON.stringify(args); 
+        if (cache.has(key)) {
+            console.log("данные получены из кэша");
+            return cache.get(key);
+        } else {
+            let result = a(...args);
+            cache.set(key, result);
+            console.log("функция выполнена");
+            return result;
+        }
+    };
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+let example = memorize(sum);
+console.log(example(3, 4)); 
+console.log(example(3, 4)); */
+
+
+/*function memorize2(func) {
+    let cache = {};
+    return function (...args) {
+        let key = JSON.stringify(args);
+        if (cache[key]) {
+            console.log("Данные получены из кэша");
+            return cache[key];
+        } else {
+            let result = func(...args);
+            cache[key] = result;
+            console.log("Функция выполнена");
+            return result;
+        }
+    };
+}
+
+function sum(a, b) {
+    return a.concat(b);
+}
+
+let example = memorize2(sum);
+
+console.log(example(["кот"], "собака"));
+console.log(example(["кот"], "собака"));*/ 
+
+
+
+/*function memorizeFactorial (func) {
+    let cache = new Map ()
+    return function (...args) {
+        let key = JSON.stringify(args)
+        if (cache.has(key)) {
+            console.log("данные получены из кэша")
+            return cache.get(key)
+        }
+        else {
+            let result = func (...args)
+            cache.set(key, result)
+            console.log("функция выполнена")
+            return result
+        }
+    }
+}
+function factorial(n) {
+    let sum = 1
+    for (let i = 1; i <= n; i++) {
+        sum = i * sum
+        
+    }
+    return sum
+
+}
+
+let memoizedFactorial = memorizeFactorial(factorial);
+
+console.log(memoizedFactorial(5));*/ 
+
+
+/*let string = "hello, world"
+function countLetters (str) {
+    let myMap = new Map ()
+    for (let i in str.split(",")) {
+        
+            
+            myMap.set(str[i], 1)
+            if (!myMap.has(str[i])) {
+                let count = 1
+                myMap.set(str[i], count++)
+            }
+        }
+        
+    
+return myMap
+}
+console.log(countLetters (string))*/ 
+
+
+
+/*const userMap = new Map();
+function addUser (id, userData) {
+    userMap.set(id, userData)
+
+}
+addUser (1, "John")
+console.log(userMap)
+
+function getUser (id) {
+    userMap.get(id)
+
+}
+getUser (1)
+console.log(userMap)  
+
+function removeUser (id) {
+userMap.delete(id)
+}
+removeUser (1)
+console.log(userMap)*/ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button></button>
+    <input type="text">
+    <checkbox></checkbox>
+    <script>
+
+/*function greeting (name) {
+    alert("Привет" + name)
+    return name
+}
+
+
+function decorator (greeting) {
+    let cash = new Map()
+    return function (x) {
+        if (cash.has(x)) {
+            return cash.get(x)
+        }
+        else {
+            result = greeting(x)
+            cash.set(x, result)
+            return result
+        }
+    }
+}
+let first = decorator(greeting)
+alert(greeting("Катя"))
+//alert("Снова" + greeting("Оля"))
+alert("Снова" + greeting("Катя"))
+//alert("Снова" + greeting("Оля"))
+
+
+function goodbye() {
+    return "goodbye"
+}
+function counter(x) {
+    let count = 0
+    return function(...other) {
+        count++
+        console.log(`Функция вызвана ${count} раз`)
+        return x(...other)
+    }
+}
+let decoratorGoodbye = counter(goodbye)
+//console.log(decoratorGoodbye())
+//console.log(decoratorGoodbye())
+//console.log(decoratorGoodbye())
+
+
+
+/*let x = 5 
+let y = 10 
+function showParametres (n, m) {
+console.log(m)
+alert(n)
+}
+showParametres(x, y)*/ 
+
+
+
+/*let words = ["apple", "pen", "banana"]
+let numbers = [1, 2, 3, 4, 5]
+
+function sortArr (x, y, z) {
+    let newArr = []
+    if (numbers.length > words.length) {
+        for (let i in numbers) {
+            newArr.push(numbers[i] + words[i])
+        }
+    }
+    else {
+        for (let y in words) {
+            if (words[i] === "underfined") {
+                newArr.push(numbers[i] + "nothing")
+                
+
+            }
+        }
+    }
+    console.log(newArr)
+}
+sortArr(words, numbers)*/ 
+
+/*let words = ["apple", "pen", "banana"];
+let numbers = [1, 2, 3, 4, 5];
+
+function sortArr(words, numbers) {
+    let newArr = [];
+    let i = 0;
+
+    while (i < words.length || i < numbers.length) {
+        let word = i < words.length ? words[i] : "неизвестное";
+        let number = i < numbers.length ? numbers[i] : "неизвестное";
+        
+        newArr.push(word + number);
+        i++;
+    }
+
+    console.log(newArr);
+}
+
+sortArr(words, numbers);*/ 
+
+
+
+/*let obj = {
+    name: "John",
+    age: 20,
+}
+function greet(...объект) {
+alert(`Привет, ${объект[0]}`)
+}
+//obj.func = greet
+//obj.func ()
+
+//greet.call(obj)
+
+greet.apply(obj, [obj.name, obj.age])*/ 
+
+
+/*function sum(a, b) {
+  return a + b;
+}
+
+let calculator = {
+    makeSum: function (c, d) {
+    return sum.call(calculator, c, d)
+    }
+}
+console.log(calculator.makeSum(2, 4))*/ 
+
+
+
+/*function getAverage() {
+  const sum = Array.prototype.reduce.call(arguments, (acc, val) => acc + val, 0);
+  return sum / arguments.length;
+}
+console.log(getAverage.apply(null, [4, 7, 2]))
+console.log(getAverage.call(null, ...[4, 7, 2]))
+console.log(Array.prototype)*/ 
+
+
+
+/*let person = {
+    name: "John",
+    age: 20,
+}
+function greet(...объект) {
+console.log(`Привет, ${объект[0]}, ${объект[1]}`)
+}
+
+
+greet.apply(person, [person.name, person.age])
+greet.call(person, person.name, person.age)*/
+
+
+
+/*function compareNumbers (a, b) {
+    if (a>b) {
+        return "a больше чем b"
+    }
+    else if (a<b) {
+        return "b больше чем a"
+    }
+    else {
+        return "a и b равны"
+    }
+}
+let comparator = {
+    compare(a, b) {
+         return compareNumbers.call(comparator, a, b)
+    }
+}
+console.log(comparator.compare(10, 5))*/
+
+
+/*function multiply (a, b) {
+    return a*b
+}
+let mathOperations = {
+    multiplyTwoNumbers (a, b) {
+        return multiply.call(mathOperations, a, b)
+    }
+}
+console.log(mathOperations.multiplyTwoNumbers(2, 4))*/ 
+
+
+
+/*let userProcessor = {arr: [{ name: "Alice", age: 25, city: "New York" },
+    { name: "Bob", age: 32, city: "Los Angeles" },
+    { name: "Charlie", age: 28, city: "Chicago" },
+  ]}*/
+/*function filterByAge () {
+    
+    let obj2 = this.sort (function (a, b) {
+        if(a.age < b.age) {
+            return -1
+        }
+        else if (a.age > b.age) {
+            return 1
+        }
+        else {
+            return 0
+        }
+        })
+        return obj2
+    }
+    
+    //console.log(filterByAge(userProcessor.arr))
+console.log(filterByAge.apply(userProcessor.arr, []))
+console.log(filterByAge.call(userProcessor.arr,))*/ 
+
+
+/*function filterByAge2 (users, minAge) {
+    let newObj = users.filter(function(item) {
+    if (item.age < minAge) {
+        return item.age
+        
+    }
+})
+console.log(newObj)
+}
+filterByAge2.apply(userProcessor, [userProcessor.arr, 30])*/ 
+
+
+
+/*function capitalizeNames () {
+    for (let i in this.arr) {
+        this.arr[i].name = this.arr[i].name.toUpperCase()
+        
+    }
+
+       
+}
+capitalizeNames.call(userProcessor, )
+console.log(userProcessor)*/ 
+
+
+/*function groupByCity () {
+    let resultObj = {}
+    let obj3 = this.arr.sort (function (a, b) {
+        if(a.city < b.city) {
+            return -1
+        }
+        else if (a.city > b.city) {
+            return 1
+        }
+        else {
+            return 0
+        }
+        })
+        for (let i in this.arr) {
+            resultObj[this.arr[i].city] = this.arr[i]
+
+        }
+        console.log(resultObj)
+    }
+
+    groupByCity.call(userProcessor,)*/ 
+
+
+
+  /*const person = {
+  name: 'John',
+  greet(greeting) {
+    return `${greeting}, ${this.name}`;
+  }
+};
+
+    function logMethod(context, methodName, ...args) {
+  // Достаем метод из объекта
+  const method = context[methodName];
+  
+  // Выводим в консоль информацию
+  console.log(context);
+  console.log(methodName);
+  console.log(args);
+  
+  // Вызываем метод с переданными аргументами
+  const result = method.bind(context)//(args, methodName);
+  
+  // Выводим результат
+  console.log('Result:', result);
+  
+  // Возвращаем результат вызова метода
+  return result;
+}
+
+// Пример использования
+
+logMethod(person, 'greet', 'Hello');*/ 
+
+
+/*const car = {
+  model: 'Tesla',
+  drive(speed) {
+    return `The ${this.model} is driving at ${speed} km/h`;
+  }
+};
+function applyWithLogging (context, methodName, ...args) {
+let method = context[methodName]
+console.log(method)
+console.log(methodName)
+console.log(args)
+const result = method.apply(context, args);
+console.log(result)
+return result
+}
+applyWithLogging(car, 'drive', [120])*/ 
+
+
+
+/*const person = {
+  name: 'Alice',
+  introduce(name, age) {
+    return `Hello, my name is ${name} and I am ${age} years old`;
+  },
+  greet(timeOfDay) {
+    return `Good ${timeOfDay}, ${this.name}!`;
+  }
+};
+function applyWithLogging (context, methodName, ...args) {
+    let method = context[methodName]
+console.log(method)
+console.log(methodName)
+console.log(args)
+const result = method.apply(context, args);
+console.log(result)
+return result
+}
+applyWithLogging(person, 'introduce', ['Alice', 30]);
+applyWithLogging(person, 'greet', ['morning']); */
+
+
+
+/*let user = {
+    name: "John",
+    age: 20,
+    greet() {
+        console.log(`hello, ${this.name}`)
+    }
+}
+let admin = {
+    name: "Kate",
+    age: 30,
+}
+user.greet.call(admin) 
+
+async function fetchData (url) {
+return new Promise (function(resolve, reject) {
+    setTimeout(function() {
+        resolve("Данные успешно загружены")
+    }, 2000)
+})
+}
+async function checkData () {
+try {
+    let result = await fetchData("https://favqs.com/api/qotd")
+    console.log(result)
+    user.greet.call(admin)
+
+}
+catch (error) {
+console.error(error.message)
+}
+
+}
+checkData ()*/ 
+
+
+/*const store = {
+    sales: [],
+    addSale(item, quantity) {
+        const sale = { item, quantity };
+        this.sales.push(sale); // 'this' указывает на объект с sales
+    }
+};
+
+const discountedStore = {
+    sales: [], // Добавляем массив sales
+    addSale(item, quantity) {
+        const discountedQuantity = quantity * 0.9; // Применяем скидку
+        store.addSale.call(this, item, discountedQuantity); // Наследуем метод addSale
+    }
+};
+
+// Проверка
+store.addSale("яблоки", 5);
+discountedStore.addSale("морковь", 10);
+
+console.log("Продажи в store:", store.sales);
+console.log("Продажи в discountedStore:", discountedStore.sales);*/ 
+
+/*let button1 = document.querySelector("button");
+let input1 = document.querySelector("input");
+let checkbox1 = document.querySelector('input[type="checkbox"]');
+
+let eventTracker = {
+    events: [],
+    logEvent(eventObj) {
+        if (eventObj && eventObj.type) {
+            eventObj.type.addEventListener("click", () => {
+                console.log("сработало");
+                this.events.push(eventObj);
+            });
+        } else {
+            console.error("неверный объект!");
+        }
+    }
+};
+
+let button = { type: button1 };
+let input = { type: input1 };
+let checkbox = { type: checkbox1 };
+
+
+eventTracker.logEvent(button);
+eventTracker.logEvent(input);
+eventTracker.logEvent(checkbox);*/ 
+
+
+
+
+/*let taskManager = {
+    tasks: [],
+    addTask (taskName, x) {
+        this.tasks.push(taskName)
+        this.tasks.push(x)
+    }
+
+}
+let priorityTaskManager = {
+    tasks: []
+}
+let highPriorityTasks = ["urgent", "critical"]
+taskManager.addTask.apply(priorityTaskManager, ["urgent", "critical"])
+console.log(priorityTaskManager)*/  
+
+
+    </script>
+</body>
+</html>

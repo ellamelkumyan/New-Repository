@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+/*function pow(number1, number2) {
+let result = 1
+for (let i = 1; i<= number2; i++) {
+    result = number1*result
+    
+}
+return result
+}
+console.log(pow(2,2))
+
+
+function pow2(number1, number2) {
+    if(number2 === 1) {
+        return number1
+    }
+    else {
+        return number1 * pow2(number1, number2-1)
+    }
+}
+console.log(pow2(2, 3))*/ 
+
+
+
+
+/*let company = { 
+  sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600 }],
+  development: {
+    sites: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800 }],
+    internals: [{name: 'Jack', salary: 1300}]
+  }
+};
+
+
+function sum(company) {
+    if(Array.isArray(company) === true) {
+        return company.reduce(function(a,b) {
+            return a+b.salary
+        }, 0)
+    }
+    else {
+        let summa = 0
+        for (let i of Object.values(company)) {
+            summa = summa + sum(i)
+            
+        }
+        return summa
+    }
+}
+
+console.log(sum(company))*/ 
+
+
+
+
+
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+
+/*while (list) {
+    console.log(list.value)
+    list = list.next
+}*/ 
+
+
+
+/*function printList(list) {
+    alert(list.value)
+if(list.next) {
+    
+    printList(list.next)
+
+}
+}
+
+printList(list)*/ 
+
+
+
+
+/*function sumTo(n) {
+    if (n === 0) {
+        return 1 //почему?
+    }
+    else {
+        return n * sumTo(n - 1)
+    }
+}
+console.log(sumTo(4))*/ 
+
+
+/*function pow(a, b) {
+    result = 1
+    for (let i = 1; i <= b; i++) {
+    result = a * result
+    }
+    return result
+}
+
+console.log(pow(4, 2))*/
+
+/*function pow (a, b) {
+if (b == 1) {
+    return a
+}
+else {
+    return a*pow(a, b-1)
+}
+}
+console.log(pow(4, 2))*/ 
+
+
+
+
+/*function isEven (a) {
+    if (a%2 === 0) {
+        console.log("Четное")
+    }
+    else {
+        console.log("Нечетное")
+    }
+}
+isEven(7)*/ 
+
+
+
+/*function isPalindrome (a) {
+    let count = 0
+    for (let i = 0; i< a.length/2; i ++) {
+        
+    if (a[i] !== a[(a.length-1)-i]) {
+        count++
+    }
+    
+        
+    }
+
+if (count !== 0) {
+    console.log("это не оно")
+}
+else {
+    console.log("это оно")
+}
+    
+}
+
+isPalindrome ("довод")*/ 
+
+
+/*function isPalindrome (a) {
+    if (a.length <= 1) {
+        return true
+    }
+    if (a[0] !== a[a.length - 1]) {
+        return false
+    }
+    return isPalindrome (a.slice(1, -1))
+}
+console.log(isPalindrome ("довод"))*/ 
+
+
+/*let arr = [2, 5, 7, 11, 1, 99]
+function maxNumbers () {
+    let number = -100
+for (let i in arr) {
+    if (arr[i] > number) {
+        number = arr[i]
+        
+    }
+}
+console.log(number)
+}
+maxNumbers (arr)*/ 
+
+
+
+
+/*let arr = [2, 5, 7, 11, 1, 99]
+function maxNumbers (arr) {
+    if (arr.length === 1) {
+        return arr[0]
+    }
+    
+        const restMax = maxNumbers (arr.slice(1))
+        return arr[0] > restMax? arr[0]: restMax
+    
+}
+console.log(maxNumbers (arr))*/ 
+
+
+/*function factorialNumber (number) { 
+  if (number === 1) { 
+    return 1 
+  } 
+  else { 
+    return number * factorialNumber(number-1) 
+}
+
+} 
+console.log(factorialNumber (5))*/ 
+
+
+
+/*function isPrime(num, divisor = 2) { 
+ 
+ if (num <= 1) return false
+ if (divisor === num) return true 
+ if (num % divisor === 0) return false 
+
+
+ return isPrime(num, divisor + 1) 
+} 
+
+
+console.log(isPrime(5))*/
+
+
+/*unction fibonacci(n) {
+    if (n <= 1) {
+        return n
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+console.log(fibonacci(5))*/
+
+
+
+/*function sumNumber (number) {
+    if (number === 0) return 0
+    return number + sumNumber (number-1)
+}
+console.log(sumNumber (5))*/ 
+
+
+
+
+
+/*function toBinary (number) {
+if (number === 0) {
+    return ""
+}
+else {
+    return toBinary(Math.floor(number/2)) + (number%2).toString()
+}
+}
+console.log(toBinary (10))*/ 
+    </script>
+</body>
+</html>
