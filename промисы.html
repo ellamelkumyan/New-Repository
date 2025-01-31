@@ -10,7 +10,7 @@
 
 
 
-/*let promise = new Promise(function(good, bad) {
+let promise = new Promise(function(good, bad) {
     setTimeout(function() {
         good("Done")
     })
@@ -18,28 +18,28 @@
 console.log(promise)
 promise.then(function(good) {
 alert(good)
-})*/ 
+})
 
 
-/*let promise2 = new Promise(function(good, bad) {
+let promise2 = new Promise(function(good, bad) {
     setTimeout(function() {
         good("Done")
     })
 }, 1000)
 promise2.then(result => alert(result), 
-error => alert(error))*/ 
+error => alert(error))
 
 
 
-/*let promise = new Promise(function(good, bad) {
+let promise = new Promise(function(good, bad) {
     setTimeout(function() {
         bad(new Error("Ошибка"))
     })
 }, 1000)
-promise.catch(console.log)*/ 
+promise.catch(console.log)
 
 
-/*function loadScript (src) {
+function loadScript (src) {
     return new Promise (function(good, bad) {
         let script = document.createElement("script")
         script.src = src
@@ -55,7 +55,7 @@ myPromise.then(script => alert("Скрипт вызван повторно"))*/
 
 
 
-/*let promise = new Promise(function(good, bad) {
+let promise = new Promise(function(good, bad) {
     setTimeout(function() {
         good("Успех")
     })
@@ -91,10 +91,10 @@ promise
 
     Promise.allSettled(function(result){
         console.log(result)
-    })*/
+    })
 
 
-   /*let promise = new Promise (function (good, bad) {
+   let promise = new Promise (function (good, bad) {
         setTimeout(function() {
             bad("Произошла ошибка")
         })
@@ -104,12 +104,12 @@ promise
     })
     promise.catch(function(error) {
         console.error("Ошибка:", error)
-    })*/
+    })
 
 
 
 
-    /*function randomNumber() {
+    function randomNumber() {
         return Math.floor(Math.random()*10) + 1
     }
     let number = randomNumber()
@@ -135,7 +135,7 @@ promise
 
 
 
-   /* function retryPromise (fn, retries) {
+    function retryPromise (fn, retries) {
         return new Promise(function (good, bad) {
             function innerFunction () {
                 fn()
@@ -166,11 +166,11 @@ function unreliableFetch() {
 }
 retryPromise(unreliableFetch, 5)
   .then(console.log)
-  .catch(console.error);*/ 
+  .catch(console.error); 
 
 
   
-  /*function createDelayedPromise(value, delay) {
+  function createDelayedPromise(value, delay) {
     return new Promise(function(resolve, reject) {
         setTimeout(function() {
             resolve(value)
@@ -178,18 +178,18 @@ retryPromise(unreliableFetch, 5)
     })
 }
 
-// Пример использования
+
 const promises = [
     createDelayedPromise('A', 3000),
     createDelayedPromise('B', 2000),
     createDelayedPromise('C', 1000)
 ];
 
-// Ожидаемый результат: C, B, A
-promises.forEach(p => p.then(console.log));*/ 
+
+promises.forEach(p => p.then(console.log));
 
 
-/*function interruptiblePromise(value, delay, cancelPromise) {
+function interruptiblePromise(value, delay, cancelPromise) {
     return new Promise(function(resolve, reject) {
         setTimeout(function() {
             resolve(value)
@@ -198,12 +198,12 @@ promises.forEach(p => p.then(console.log));*/
 
 }
 
-// Пример использования
+
 const cancel = new Promise(resolve => setTimeout(resolve, 1500));
 
 interruptiblePromise('Test', 3000, cancel)
     .then(console.log)
-    .catch(console.error); */ 
+    .catch(console.error); 
 
 
 
@@ -241,7 +241,7 @@ function createDelayedPromise (value, delay) {
     })
 }
 
-// Пример использования
+
 const tasks = [
     createDelayedPromise(10, 1000),
     createDelayedPromise(20, 2000),
@@ -249,14 +249,7 @@ const tasks = [
 ];
 
 progressivePromises(tasks).then(() => console.log('All done!'));
-// Ожидаемый результат:
-// "Progress: 1/3 completed"
-// "Result: 10"
-// "Progress: 2/3 completed"
-// "Result: 20"
-// "Progress: 3/3 completed"
-// "Result: 30"
-// "All done!"
+
 
 
 
