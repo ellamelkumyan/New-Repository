@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Поиск книг</h1>
+    <input type="text">
+    <button>Искать</button>
+    <div ></div>
+    
+    <script>
+
+
+let button = document.querySelector("button")
+//let input = document.querySelector("input").values
+button.addEventListener("click", function() {
+    let input = document.querySelector("input").value
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${input}`)
+    .then((response) => {
+
+return response.json()
+  })
+.then((response) => {
+    showDisplay(response.items)
+
+
+
+})
+.catch(function(error) {
+    console.error("Ошибка:", error)
+})
+
+})
+
+
+function showDisplay(items) {
+let div = document.querySelector("div")
+div.innerHTML = ""
+for (let i in items) {
+    let author = items[i].volumeInfo.authors
+    let image = items[i].volumeInfo.imageLinks.smallThumbnail
+    let div2 = document.createElement("div")
+    div2.innerHTML = `
+                    <div>
+                        
+                        <p><strong>Автор:</strong> ${author}</p>
+        
+                        <img src = '${image}'> 
+                    </div>
+                    
+                `;
+                div.appendChild(div2)
+}
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*class User {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+
+
+    }
+    sayHello() {alert(`${this.name} привет`)}
+
+    get name () {
+        return this._name
+    } 
+    set name (value) {
+        if (value.length === 4) {
+            console.log("У вас короткое имя")
+            
+        }
+        this._name = value
+        
+    }
+
+
+
+}
+let John = new User ('John', 20) 
+John.sayHello()
+console.log(typeof John)
+
+console.log(John.name)*/ 
+
+
+/*let streets = [1, 2, 4, 6, 7, 8]
+let name1 = "Moscow"
+class City {
+    constructor (name, streets) {
+        this.name = name
+        this.streets = streets
+
+    }
+    info() {
+        for (let i in streets) {console.log(`В городе ${this.name} есть улица ${this.streets[i]}`)}
+        
+    }
+}
+let myCity = new City (name1, streets)
+myCity.info()*/ 
+
+
+/*class Reclatangle {
+    constructor (width, height) {
+        this.width = width
+        this.height = height
+    }
+    getArea() {
+        console.log(this.width*this.height)
+    }
+    getPerimeter() {
+        console.log(2*(this.width+this.height))
+    }
+}
+const myRectangle = new Reclatangle (10, 5)
+myRectangle.getArea()
+myRectangle.getPerimeter()*/ 
+
+
+
+/*class Counter {
+    static count = 0
+    constructor (count) {
+        
+        Counter.count++
+    }
+    getCount() {
+        console.log(Counter.count)
+    }
+
+}
+const myCounter = new Counter ()
+myCounter.getCount()*/  
+
+
+
+/*class BankAccount {
+    constructor() {
+        this.balance = 0
+    }
+    deposit(amount) {
+        if (amount>0) {
+        console.log(this.balance + amount)
+        this.balance+=amount
+        }
+    }
+    withdraw(amount) {
+        if (amount<this.balance) {
+            console.log(this.balance - amount)
+        }
+    }
+    getBalance() {
+        console.log(this.balance)
+    }
+}
+const myAccount = new BankAccount()
+myAccount.deposit(100000)
+myAccount.deposit(100000)
+myAccount.withdraw(20)*/ 
+
+
+
+/*class Animal {
+    constructor (name, city) {
+        this.name = name
+        this.city = city
+    }
+    live() {
+        console.log(`${this.name} живет в ${this.city}`)
+    }
+    stop() {
+        console.log(`${this.name} вымерло`)
+        this.name = null
+        this.city = null
+    }
+}
+const myAnimal = new Animal ("Barsik", "Moscow")
+
+class Kitten extends Animal{
+    run() {
+        console.log(`${this.name} бегает по ${this.city}`)
+    }
+}
+const myKitten = new Kitten ("Murka", "Minsk") 
+myKitten.run()*/ 
+
+
+
+/*class Grandparents {
+    constructor(name, city) {
+        this.name = name
+        this.city = city
+    }
+}
+const myGrands = new Grandparents ("John", "Moscow")
+
+class Parents extends Grandparents {
+    constructor(name, city) {
+        super(name, city) 
+    }
+}
+
+const myParents = new Parents ("Sam", "Paris")
+delete Parents.name 
+delete Parents.city
+console.log(myParents)
+
+class Children extends Parents {
+    constructor(name, city) {
+        super(name, city) 
+    }
+}
+const myChildren = new Children ("Kate", "Rome")*/
+
+
+
+/*class Animal {
+  constructor(name) {
+    this.speed = 0;
+    this.name = name;
+  }
+  // ...
+}
+
+class Rabbit extends Animal {
+
+  constructor(name, earLength) {
+    super(name)
+    
+    this.earLength = earLength;
+  }
+
+  // ...
+}
+const myRabbit = new Rabbit ("Vasya", 10)
+console.log(myRabbit)*/ 
+
+
+
+/*class Animals {
+    constructor() {
+        this.stomach = []
+
+    }
+    fullStomach(food) {
+        this.stomach.push(food)
+    }
+    show() {
+        console.log(this.stomach)
+    }
+}
+
+class Lazy extends Animals {
+    
+}
+class Speedy extends Animals {
+    
+}
+const myLazy = new Lazy()
+myLazy.fullStomach("apple")
+myLazy.show()
+
+const mySpeedy = new Speedy()
+mySpeedy.show()
+
+const myAnimals = new Animals()
+myAnimals.show()*/ 
+
+
+/*class Animal {
+
+constructor(name) {
+  this.name = name;
+}
+
+}
+class Rabbit extends Animal {
+  constructor(name) {
+    super(name)
+    this.created = Date.now();
+  }
+}
+
+let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
+alert(rabbit.name);*/ 
+
+
+
+/*class Clock {
+  constructor({ template }) {
+    this.template = template;
+  }
+
+  render() {
+    let date = new Date();
+
+    let hours = date.getHours();
+    if (hours < 10) hours = '0' + hours;
+
+    let mins = date.getMinutes();
+    if (mins < 10) mins = '0' + mins;
+
+    let secs = date.getSeconds();
+    if (secs < 10) secs = '0' + secs;
+
+    let output = this.template
+      .replace('h', hours)
+      .replace('m', mins)
+      .replace('s', secs);
+
+    console.log(output);
+  }
+
+  stop() {
+    clearInterval(this.timer);
+  }
+
+  start() {
+    this.render();
+    this.timer = setInterval(() => this.render(), 1000);
+  }
+
+}
+
+class NewClock extends Clock{
+    constructor ({template, info = 1000}) {
+        super(template)
+        this.info = info
+    }
+    start() {
+    this.render();
+    this.timer = setInterval(() => this.render(), this.info);
+  }
+}
+const myClock = new NewClock({template: "h:m:s", info: 2000})
+myClock.start()*/
+
+/*class Clock {
+  constructor({ template }) {
+    this.template = template;
+  }
+
+  render() {
+    let date = new Date();
+
+    let hours = date.getHours();
+    if (hours < 10) hours = '0' + hours;
+
+    let mins = date.getMinutes();
+    if (mins < 10) mins = '0' + mins;
+
+    let secs = date.getSeconds();
+    if (secs < 10) secs = '0' + secs;
+
+    let output = this.template
+      .replace('h', hours)
+      .replace('m', mins)
+      .replace('s', secs);
+
+    console.log(output);
+  }
+
+  stop() {
+    clearInterval(this.timer);
+  }
+
+  start() {
+    this.render();
+    this.timer = setInterval(() => this.render(), 1000);
+  }
+}
+
+class NewClock extends Clock {
+  constructor({ template, info = 1000 }) {
+    super({ template });
+    this.info = info;
+  }
+
+  start() {
+    this.render();
+    this.timer = setInterval(() => this.render(), this.info);
+  }
+}
+
+
+const myClock = new NewClock({ template: "h:m:s", info: 2000 });
+myClock.start();*/ 
+
+
+/*class Person {
+  constructor (name, age) {
+    this.name = name 
+    this.age = age
+  }
+  introduce() {
+    console.log(`Меня зовут ${this.name} и мне ${this.age}`)
+  }
+}
+class Student extends Person {
+  constructor (name, age, course) {
+  super(name, age)
+  this.course = course
+  }
+  introduce() {
+    console.log(`Меня зовут ${this.name} и мне ${this.age} и я учусь на ${this.course} курсе`)
+  }
+}
+const myPerson = new Person ("John", 20)
+myPerson.introduce() 
+const myStudent = new Student ("John", 20, 3)
+myStudent.introduce()*/ 
+
+
+
+/*class Vehicle {
+  constructor (speed) {
+    this.speed = speed
+  }
+  move() {
+    console.log(`Транспорт двигается со скоростью ${this.speed} км/ч`)
+  }
+
+}
+class Car extends Vehicle {
+  constructor (speed, brand, fuel) {
+    super(speed)
+    this.brand = brand
+    this.fuel = fuel
+  }
+  move() {
+    console.log(`Автомобиль ${this.brand} двигается со скоростью ${this.speed} км/ч `)
+  }
+
+}
+const myCar = new Car (100, "Lada", "petrol") 
+myCar.move()*/ 
+
+
+/*class Shape {
+  getArea() {
+    return 0
+  }
+}
+class Rectangle extends Shape{
+  constructor (width, height) {
+    super()
+    this.width = width
+    this.height = height
+  }
+  getArea() {
+    return this.height*this.width
+  }
+}
+class Circle extends Shape{
+  constructor (radius) {
+    super()
+    this.radius = radius
+  }
+  getArea() {
+    return Math.PI * this.radius * this.radius
+  }
+}
+const shapes = [
+  new Rectangle(5, 10), 
+  new Circle(7)        
+]
+for (let i in shapes) {
+  console.log(shapes[i].getArea())
+}*/ 
+
+
+/*class BankAccount {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber
+    this.balance = balance
+  }
+  deposit(amount) {
+    this.balance = amount + this.balance
+    return this.balance
+  }
+  withdraw(amount) {
+    this.balance = this.balance - amount
+    return this.balance
+  }
+}
+class SavingsAccount extends BankAccount {
+  constructor(accountNumber, balance, interestRate) {
+    super(accountNumber, balance)
+    this.interestRate = interestRate
+  }
+  applyInterest(interest) {
+    interest = this.balance*this.interestRate
+    return interest
+  }
+}
+const myAccount = new SavingsAccount (1000, 10, 10)
+console.log("Мой баланс", myAccount.deposit(20))
+console.log("Мой баланс", myAccount.withdraw(5))
+console.log("С процентами", myAccount.applyInterest(50))
+console.log("Мой баланс", myAccount.balance)*/ 
+
+    </script>
+</body>
+</html>

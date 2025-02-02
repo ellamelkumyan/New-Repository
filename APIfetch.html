@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 100px; height: 100px; border: 5px solid red"></div>
+    <button onclick="">ПОИСК</button>
+    <input type="text">
+    <script>
+
+let link = "https://dog.ceo/api/breeds/image/random";
+
+//fetch(link)
+
+  /*.then((response) => {
+    if (response.status === 302) {
+      throw new Error("Перенаправление обнаружено (HTTP 302)");
+    }
+    if (!response.ok) {
+      throw new Error(`Ошибка HTTP: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((html) => {
+    console.log("Ответ получен, HTML:", html);
+  })
+  .catch((error) => {
+    console.error("Произошла ошибка:", error.message);
+  });*/ 
+
+
+ /* .then((response) => {
+if(!response.ok) {
+    throw new Error("Ошибка сети")
+}
+return response.json()
+  })
+  .then((data) => {
+let picture = document.createElement("img")
+picture.src=data.message
+picture.style.width = "300px"
+picture.style.height = "300px"
+document.body.appendChild(picture)
+
+  })
+  .catch(function(error) {
+    console.error(error)
+  })*/ 
+
+
+
+  /*fetch('https://dog.ceo/api/breeds/image/random')
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`Ошибка сети: ${response.status}`);
+    }
+    return response.json(); // Преобразуем ответ в JSON
+  })
+  .then((data) => {
+    console.log('Ссылка на картинку:', data.message);
+
+    // Выводим изображение на страницу
+    const img = document.createElement('img');
+    img.src = data.message;
+    img.alt = 'Random Dog';
+    img.style.maxWidth = '300px';
+    document.body.appendChild(img);
+  })
+  .catch((error) => {
+    console.error('Произошла ошибка:', error.message);
+  });*/ 
+
+
+
+  
+  let button = document.querySelector("button")
+  let div = document.querySelector("div")
+  button.addEventListener("click", function() {
+    let input = document.querySelector("input").value
+    try {
+        
+        let myFetch = fetch (`https://restcountries.com/v3.1/name/${input}`)
+        if (!response.ok) {
+            throw new Error ("Страна не найдена")
+        }
+        let data = response.json()
+        let country = data[0]
+        div.innerHTML = `<h2>${country.name.common}</h2>
+      <p><strong>Столица:</strong> ${country.capital ? country.capital[0] : "Нет данных"}</p>
+      <p><strong>Население:</strong> ${country.population.toLocaleString()}</p>
+      <p><strong>Регион:</strong> ${country.region}</p>
+      <img src="${country.flags.svg}" alt="Флаг ${country.name.common}" width="150">
+    `;
+
+  }
+catch(error) {
+    div.textContent = error.message
+}})
+
+   /*.then (function(response) {
+    if(response.ok) {
+        console.log()
+    }
+    if (!response.ok) {
+        throw new Error ("Страна не найдена")
+    }
+   })
+   .catch(function(error) {
+    console.error("Ошибка:", error)
+   })*/ 
+
+    </script>
+</body>
+</html>

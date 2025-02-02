@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*let computer = new Object ({
+monitor: "Asus", 
+keyboard: "RGB",
+motherboard: "Nvidea"
+
+})
+console.log(computer.keyboard)
+
+
+
+let house = {
+1: "Petrovs",
+2: "Sidorovs",
+third: "Ivanovs",
+}
+for (let i in house) {
+    console.log (i)
+    console.log(house[i])
+}
+
+
+
+
+
+let user = {
+name: "Anne",
+age: 30,
+country: "Russia",
+}
+const question = prompt("Что вы хотите узнать о пользователе?")
+if (question === "имя") {
+    question = "name"
+}
+else if (question === "возраст")  {
+    question === "age"
+}
+for (let i in user) {
+    if (question === i) {
+    console.log(user[i])
+}
+
+}*/
+
+
+
+
+
+
+
+
+const product = prompt("Какой товар купить?")
+let shop = {
+[product]: "Товар закончился"
+
+
+}
+//alert(shop.яблоко)
+
+let realShop = {
+помидор: 1,
+огурец: 2,
+яблоко: 3,
+манго: 0,
+}
+
+for (let i in realShop) {
+    if (realShop[i] === 0 && product === i) {
+        
+alert(shop[product])
+
+    }
+    else if (realShop[i] > 0 && product === i) {
+        alert(i+" "+realShop[i])
+    }
+
+}
+let summa = 0
+for (let i in realShop) {
+    summa=summa + realShop[i]
+    
+}
+console.log(summa)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+        }
+        #header {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 48px;
+            background-color: white;
+            padding-top: 8px;
+            
+        }
+        #header img {
+            height: 24px;
+            width: 136px;
+            margin-left: 30px;
+        }
+        #input {
+            width: 230px;
+            height: 32px;
+            margin-left: 48px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(230, 231, 233);
+        }
+        #full {
+            width: 100%;
+            height: 800px;
+            background-color: rgb(230, 231, 233);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        #leftSide {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(230, 231, 233);
+            width: 540px;
+            height: 474px;
+            margin-left: 70px;
+
+        }
+        #rightSide {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(230, 231, 233);
+            width: 320px;
+            height: 800px;
+            margin-left: 50px;
+
+        }
+        #text1 {
+            width: 540px;
+            height: 26px;
+            background-color: rgb(230, 231, 233);
+            font-size: 22px;
+            margin-left: 30px;
+            margin-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #text2 {
+            width: 540px;
+            height: 40px;
+            background-color: rgb(230, 231, 233);
+            font-size: 14px;
+            margin-left: 0px;
+            margin-top: 50px;
+            color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 1.5;
+
+        }
+        #phone {
+            width: 250px;
+            height: 450px;
+            margin-left: 50px;
+            margin-top: 50px;
+            
+
+        }
+        
+        #phone img {
+       width: 100%;
+       height: auto;
+       margin-left: 20px;
+}
+        
+              
+        
+            
+            
+        
+        
+        
+        #Вход img {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-left: 130px;
+        }
+        #Вход {
+            width: 320px;
+            height: 350px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+        
+        }
+        #Вход input {
+            width: 272px;
+            height: 36px;
+            background-color: rgb(230, 231, 233);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 25px;
+            margin-left: 23px;
+            color: grey;
+        }
+        #входТекст {
+            margin-top: 15px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 545;
+            margin-left: 85px;
+
+
+        }
+        button {
+            width: 272px;
+            height: 36px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(29, 29, 145, 0.884);
+            font-size: 14px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+            margin-left: 25px;
+        }
+        #Создать {
+            width: 320px;
+            height: 214px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin-top: 120px;
+            border: none;
+            border-radius: 10px;
+            
+
+        }
+        #greenButton {
+            background-color: green;
+            width: 272px;
+            height: 36px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 25px;
+
+
+        }
+        #whiteButton {
+            background-color: white;
+            color: rgba(29, 29, 145, 0.884);
+            border: solid;
+            border-color: rgba(29, 29, 145, 0.884);
+            border-radius: 10px;
+            border-width: 2px;
+            margin-top: 10px;
+            width: 272px;
+            height: 36px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 25px;
+
+        }
+        #footer {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 340px;
+            background-color: rgb(230, 231, 233);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 0px;
+            
+            
+            
+        }
+        #check {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: row;
+            max-width: 20px;
+            max-width: 20px;
+        }
+        #checkText {
+            font-size: 13px;
+            color: grey;
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #создатьТекст {
+            margin-left: 10px;
+            margin-top: 10px;
+            color: grey;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 1.5;
+        }
+        #footerText {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+        }
+        #GooglePlay {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        #GooglePlayText {
+            color: rgba(29, 29, 145, 0.884);
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        #RuStore {
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+        }
+        #RuStoreText {
+            color: rgba(29, 29, 145, 0.884);
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            
+            
+           
+
+        }
+
+        #AppStore {
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+        }
+        #AppStoreText {
+            color: rgba(29, 29, 145, 0.884);
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+
+            
+
+        }
+        #челикиПодТелефоном {
+            width: 540px;
+            height: 31px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(230, 231, 233);
+            margin-top: 10px;
+        
+        }
+        #chelik1 {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            flex-direction: row;
+        }
+        #chelik2 {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            flex-direction: row;
+            
+        
+        }
+        #chelik3 {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        #ВсеПродукты {
+            color: rgba(29, 29, 145, 0.884);
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 40px;
+            margin-left: 170px;
+        }
+        #Узнатьбольше {
+            color: grey;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+        #footerText1 {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(60, 60, 194, 0.89);
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #footerText2 {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(60, 60, 194, 0.89);
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        #footerText3 {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(60, 60, 194, 0.89);
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        #входInputValue {
+            margin-left: 30px;
+        }
+        #QR {
+            width: 320px;
+            height: 150px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        #QR img {
+            width: 68px;
+            height: 68px;
+            margin-left: 25px;
+            margin-top: 40px;
+            
+
+        }
+        #QRtext1 {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            margin-top: 40px;
+            
+            
+            
+
+        }
+        #QRTexts {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            
+        }
+        #QRtext2 {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: grey;
+            margin-top: 10px;
+            
+        }
+        #QRtext3 {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(60, 60, 194, 0.89);
+            margin-top: 10px;
+            
+        }
+        #Применяются {
+            font-size: 13px;
+            color: grey;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            margin-left: 25px;
+
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+    <div id="header"> <img src="логотип.png" alt=""> <input id = "input" type="text" value="🔎 Поиск"> </div>
+    <div id = "full"> 
+        <div id="leftSide">
+        <div id = "text1"> <b>ВКонтакте для мобильных устройств</b> </div>
+        <div id = "text2"> Установите официальное мобильное приложение ВКонтакте и оставайтесь в курсе новостей ваших друзей, где бы вы ни находились.</div>
+        <div id = "phone"> <img src="phone2.jpg" alt=""></div>
+        <div id = "челикиПодТелефоном">
+            <div id="GooglePlay"> <img src="челик.jpg" id="chelik1" alt=""> <div id="GooglePlayText">Google play</div> </div>
+            <div id="RuStore"> <img src="челик.jpg" id="chelik2" alt=""> <div id="RuStoreText">RuStore</div> </div>
+            <div id="AppStore"> <img src="челик.jpg" id="chelik3" alt=""> <div id="AppStoreText">App Store</div> </div>
+    </div>
+    <div id="ВсеПродукты">Все продукты ></div>
+</div>
+    <div id="rightSide">
+        <div id = "Вход"> <img src="лого2.png" alt=""> <div id="входТекст">Вход ВКонтакте </div>
+            <input type="text" id = "входInputValue"value="Телефон или почта">
+         <input type="checkbox" id="check" name="subscribe" value="yes"> <div id="checkText">Сохранить вход?</div>
+            <button> Войти </button>
+            <div id="QR">
+                <img src="куаркод.jpg" alt="">
+                <div id = "QRTexts">
+                <div id="QRtext1">Быстрый вход поQR‑коду</div>
+                <div id="QRtext2">Наведите камеру телефона</div>
+                <div id="QRtext3">Подробнее</div>
+            </div>
+        </div>
+        
+    </div>
+        
+        <div id = "Создать">
+            <button id="greenButton"> Создать аккаунт </button>
+            <button id="whiteButton"> Создать страницу для бизнеса </button>
+            <div id="создатьТекст"> После регистрации вы получите доступ 
+            ко всем возможностям VK ID
+            </div>
+            <div id="Узнатьбольше">Узнать больше</div>
+        </div>
+        <div id="Применяются">Применяются рекомендательные технологии</div>
+    </div>
+    
+</div>
+    <div id = "footer" > 
+        <div id = "footerText1">ВКонтакте © 2006-2024</div>
+        <div id = "footerText2">О ВКонтакте Правила Для бизнеса Разработчикам</div>
+        <div id = "footerText3">Русский English все языки »</div>
+    </div>
+</body>
+</html>

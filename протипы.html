@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*let obj = {
+            name: "John",
+            ability() {
+                alert("Я могу говорить")
+
+            },
+            age: 23,
+        }
+        let objChild = {
+            name: "Peter",
+            age: 2,
+            __proto__: obj
+        
+        }
+
+        objChild.__proto__ = obj 
+        objChild.ability()
+
+        let animals = {
+            eats: true,
+        }
+
+        let mammals = {
+            eats: "milk",
+            swim: true,
+        }
+
+        let rabbit = {
+            jump: true
+        }
+
+        let whiteRabbit = {
+            color: "white"
+
+
+        }
+
+        mammals.__proto__ = animals
+        rabbit.__proto__ = mammals
+        whiteRabbit.__proto__ = rabbit
+        console.log(whiteRabbit.eats)
+
+
+
+        let user = {
+            name: "John",
+            surname: "Petrov",
+            set fullName (value) {
+                [this.name, this.surname] = value.split(" ")
+            },
+            get fullName () {
+                return `${this.name} ${this.surname}`
+            }
+        }
+
+        let userChild = {
+            isAdmin: true,
+        }
+        userChild.__proto__ = user
+        console.log(userChild.fullName)
+        userChild.fullName = "Ivan Ivanov"
+        console.log(userChild.name)
+
+        let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  }
+};
+
+let speedy = {
+  __proto__: hamster
+};
+
+let lazy = {
+  __proto__: hamster
+};
+
+speedy.stomach = []
+lazy.stomach = []
+speedy.stomach.push("apple")
+console.log(lazy.stomach)*/ 
+
+
+    
+/*let animal = {
+    name: "Tolya",
+    speak() {alert("Животное говорит")},
+}
+let dog = {
+bark() {console.log("Собака лает")},
+__proto__: animal,
+}
+console.log(dog)*/ 
+
+
+let vehicle = {
+    brand: "Lada",
+    speed: 100,
+    move() {console.log(this.speed)}
+
+}
+let car = {
+    doors: 4,
+    honk() {console.log("Могу сигналить")},
+    __proto__: vehicle
+}
+console.log(car)
+
+    </script>
+</body>
+</html>

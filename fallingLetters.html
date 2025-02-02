@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show {
+            animation: appear 10s forwards;
+        }
+        @keyframes appear {
+            from {
+                transform: translate(0,0)
+            }
+            to {
+                transform: translate(0, 100vh);
+                
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        let body = document.querySelector("body")
+        document.addEventListener("keydown", function (param) {
+            let div = document.createElement("div")
+            body.appendChild(div)
+            div.textContent = param.key
+            body.style.display = "flex"
+            body.style.flexDirection = "row"
+            div.className = "show"
+
+            
+        })
+    </script>
+</body>
+</html>

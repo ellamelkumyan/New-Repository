@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+let promise = new Promise(function(good, bad) {
+    setTimeout(function() {
+        good("Done")
+    })
+}, 1000)
+console.log(promise)
+promise.then(function(good) {
+alert(good)
+})
+
+
+let promise2 = new Promise(function(good, bad) {
+    setTimeout(function() {
+        good("Done")
+    })
+}, 1000)
+promise2.then(result => alert(result), 
+error => alert(error))
+
+
+
+let promise = new Promise(function(good, bad) {
+    setTimeout(function() {
+        bad(new Error("Ошибка"))
+    })
+}, 1000)
+promise.catch(console.log)
+
+
+function loadScript (src) {
+    return new Promise (function(good, bad) {
+        let script = document.createElement("script")
+        script.src = src
+        script.onload = () => good(script)
+        script.onerror = () => bad(new Error("Ошибка загрузки скрипта"))
+        document.head.append(script)
+    })
+}
+let myPromise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js")
+myPromise.then((good) => alert(`${good.src} загружен`),
+(bad) => alert(`${bad.message} не загружен`))
+myPromise.then(script => alert("Скрипт вызван повторно"))*/ 
+
+
+
+let promise = new Promise(function(good, bad) {
+    setTimeout(function() {
+        good("Успех")
+    })
+}, 2000)
+console.log(promise)
+promise.then(function(good) {
+alert(good)
+})
+
+promise
+    .then(function(result) {
+        console.log(result)
+        
+    })
+    .catch(function(error) {
+        console.error("Ошибка:", error)
+    })
+
+
+
+    let promise1 = new Promise (function (good, bad) {
+        setTimeout(function() {
+            good("Первый")
+
+        })
+    }, 1000)
+    let promise2 = new Promise (function (good, bad) {
+        setTimeout(function() {
+            bad("Ошибка второго промиса")
+
+        })
+    }, 2000)
+
+    Promise.allSettled(function(result){
+        console.log(result)
+    })
+
+
+   let promise = new Promise (function (good, bad) {
+        setTimeout(function() {
+            bad("Произошла ошибка")
+        })
+    })
+    promise.then(function(result) {
+        console.log(result)
+    })
+    promise.catch(function(error) {
+        console.error("Ошибка:", error)
+    })
+
+
+
+
+    function randomNumber() {
+        return Math.floor(Math.random()*10) + 1
+    }
+    let number = randomNumber()
+    function checkNumber(number) {
+        return new Promise (function(good, bad) {
+            if (number>5) {
+                good(number)
+            }
+            else {
+                bad(`Number too small: ${number}`)
+            }
+        })
+    }
+    checkNumber(number)
+    .then(function(number) {
+        let newNumber = number+2
+        console.log(newNumber)
+
+    })
+    .catch(function(error){
+        console.error("Ошибка:", error)
+    })*/ 
+
+
+
+    function retryPromise (fn, retries) {
+        return new Promise(function (good, bad) {
+            function innerFunction () {
+                fn()
+                .then(good)
+            
+            .catch(function(error) {
+                if(retries > 0) {
+                    console.log("Превышено кол-во ошибок")
+                    retries--
+                    innerFunction ()
+                }
+                else {
+                    bad(error)
+                }
+            })
+            }
+            innerFunction ()
+
+        })
+    }
+    let attempt = 0;
+function unreliableFetch() {
+  return new Promise((resolve, reject) => {
+    attempt++;
+    if (attempt === 3) resolve("Success!");
+    else reject("Failed attempt " + attempt);
+  });
+}
+retryPromise(unreliableFetch, 5)
+  .then(console.log)
+  .catch(console.error); 
+
+
+  
+  function createDelayedPromise(value, delay) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve(value)
+        }, delay)
+    })
+}
+
+
+const promises = [
+    createDelayedPromise('A', 3000),
+    createDelayedPromise('B', 2000),
+    createDelayedPromise('C', 1000)
+];
+
+
+promises.forEach(p => p.then(console.log));
+
+
+function interruptiblePromise(value, delay, cancelPromise) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve(value)
+        }, delay)
+    })
+
+}
+
+
+const cancel = new Promise(resolve => setTimeout(resolve, 1500));
+
+interruptiblePromise('Test', 3000, cancel)
+    .then(console.log)
+    .catch(console.error); 
+
+
+
+
+
+function progressivePromises(promises) {
+    let count = 0
+    let allPromises = promises.length
+    return new Promise (function(resolve, reject) {
+        let results = []
+        promises.forEach(function(item) {
+            item.then(function(result) {
+                results.push(result)
+                console.log(result)
+                count++
+            })
+            .catch(function(error) {
+                console.error(error)
+            })
+            .finally(function() {
+                if(count === allPromises) {
+                resolve(results)
+                }
+            })
+        })
+        
+    })
+
+}
+function createDelayedPromise (value, delay) {
+    return new Promise (function(resolve, reject) {
+        setTimeout(function() {
+            resolve(value)
+        }, delay)
+    })
+}
+
+
+const tasks = [
+    createDelayedPromise(10, 1000),
+    createDelayedPromise(20, 2000),
+    createDelayedPromise(30, 3000)
+];
+
+progressivePromises(tasks).then(() => console.log('All done!'));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function * showNumbers (a) {
+            yield 1
+            yield a
+            return 2
+        }
+        let x = showNumbers(3)
+        console.log(x.next().value)
+        let y = showNumbers(3)
+        console.log(y.next().done)
+        console.log(y.next().done)
+        console.log(y.next().done)*/ 
+
+ 
+        /*function * endless () {
+            let i = 0 
+            while (true) {
+                
+                yield i++
+    
+            }
+        }
+        let x = endless()
+        for (let y = 30; y <= 40; y++) {console.log(x.next().value)}*/ 
+
+
+
+        /*function* interactiveGenerator() {
+        const name = yield "Как вас зовут?";
+   yield `Приятно познакомиться, ${name}!`;
+}
+
+const gen = interactiveGenerator();
+
+console.log(gen.next().value); // "Как вас зовут?"
+console.log(gen.next("Элла").value); // "Приятно познакомиться, Элла!"*/ 
+
+/*let arr = ["a", "b", "c"]
+function * showLetters () {
+    while (true) {
+        let a = ""
+    for (let i in arr) {
+        a = a + arr[i]
+    }
+    yield a
+}
+}
+let x = showLetters()
+console.log(x.next().value)*/ 
+
+
+
+       /*function * randomNumbers(min, max, count) {
+         for (let i = 1; i<count; i ++) {
+        yield Math.floor(Math.random()*(max-min))+min
+        
+         }
+       }
+       let y = randomNumbers(2, 7, 5)
+        console.log(y.next().value)*/ 
+
+
+        /*function* generator (min, max, step) {
+            for (let i = min; i <= max; i+=step) {
+                yield i
+            }
+
+        }
+        let gen = generator(1, 10, 2)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)
+        console.log(gen.next().value)*/ 
+
+
+
+        //Спроси Ивана
+        /*let arr = [1, 2, 3, 4]
+        function* changeArr (array) {
+            if (array.length <= 1) {
+                yield array
+
+            }
+             else {
+                for (let i = 0; i<array.length; i++) {
+                let current = array[i]
+                let next = array.slice(0, i).concat(array.slice(i+1))
+                for (let i of changeArr(next)) {
+                    yield [current, ...i]
+                }
+                
+
+             }
+            }
+            
+        }
+        let gen = changeArr (arr) 
+        for (let i of gen) {
+            console.log(i)
+
+        }*/ 
+        
+
+
+
+        /*let obj = {}
+        Object.defineProperty(obj, 'number', {
+            value: 111,
+            writable: false,
+            configurable: true,
+        })*/ 
+
+
+        /*let obj = {}
+        Object.defineProperty(obj, 'number', {
+            value: 123,
+            enumerable: false,
+
+        })
+        Object.defineProperty(obj, "getHidden", {
+            get() {
+                return this.number
+            }
+
+        })*/ 
+
+
+        /*let person = {
+            name: "John",
+            age: 30,
+            city: "Moscow",
+            pets: {
+                cat: "Barsik",
+                dog: "Rex"
+            }
+        }
+
+        function showUser ({name, age,  city, pets: {cat, dog}}) {
+            console.log(`Имя: ${name}`)
+            console.log(`Возраст: ${age}`)
+            console.log(`Город: ${city}`)
+            console.log(`Питомцы: ${cat}, ${dog}`)
+
+        }
+        showUser(person)*/ 
+
+
+
+        /*let arr = ["dog", "cat", "parrot", "tiger"]
+        let [a, b, , , c] = arr
+        console.log(b)*/ 
+
+
+
+
+        /*let rectangle = {
+            area() {
+               return "30m"
+            }
+        }
+        let circle = {
+            area() {
+                return "40m"
+            }
+        }
+        let shape = {
+            __proto__: rectangle
+        
+        }
+        
+        console.log(shape)*/ 
+
+
+
+        
+        
+        /*student = {
+            study() {
+                console.log("нужно учиться")
+            },
+            grade: 5
+        }
+
+        person = {
+            greet() {
+                console.log("приветики")
+            },
+            __proto__: student
+        }
+        console.log(person)*/ 
+
+
+
+        /*let student = {
+            name: "Ann",
+            age: 10,
+            grade: 5,
+        }
+        let student2 = {
+            name: "Ann2",
+            age: 10,
+            grade: 5,
+        }
+        function sayHello () {
+            console.log("hello")
+        }
+        function sayBye () {
+            console.log("bye")
+        }
+        let myMap = new Map ([
+            [student, sayHello],
+            [student2, sayBye]
+        ])
+        console.log(myMap)
+        myMap.get(student)()
+        myMap.get(student2)()*/ 
+
+
+        
+        
+      
+        /*let mySet = new Set (["cat", "dog", "cat", "bird", "Cat"])
+        let newSet = new Set ()
+        for (let word of mySet) {
+            let words = word.toLowerCase()
+            newSet.add(words)
+            
+        }
+        console.log(newSet)*/
+
+
+        /*let x = "анна"
+        let reversed = x.split("").reverse().join("")
+        if (x === reversed) {
+            console.log (true)
+        }
+        else {
+            console.log(false)
+        }*/ 
+
+
+
+
+        
+
+
+        
+
+
+
+
+
+     
+
+
+
+
+
+    </script>
+</body>
+</html>

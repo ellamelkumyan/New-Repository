@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fullscreen-div {
+            background-color: black;
+            height: 100%;
+            position: absolute;
+            width: 1500px;
+            
+
+
+        }
+        #title {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        #contents {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            justify-content: center;
+            width: 1000px;
+            height: 300px;
+            margin-top: 90px;
+            margin-left: 240px;
+            
+
+
+            
+        }
+        #contentsList {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            line-height: 60px;
+            margin-left: 20px;
+
+        }
+        #generalInfo {
+            background-color: black;
+            width: 1500px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+            
+        }
+        #info {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            width: 600px;
+            height: 300px;
+            margin-left: 240px;
+
+        }
+        #infoList {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            line-height: 60px;
+            margin-left: 10px;
+        }
+        #poster {
+            width: 200px;
+            height: 300px;
+            margin-left: 150px;
+        }
+        #partWithPowers {
+            background-color: black;
+            width: 1500px;
+            height: 700px;
+        }
+        #powers {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            width: 1000px;
+            height: 600px;
+            margin-left: 240px;
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+        #powerTitle {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            
+
+        }
+        #allPowers {
+            display: flex;
+            flex-direction: row;
+
+        }
+        #leftPowers {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            width: 500px;
+            height: 400px;
+            margin-left: 120px;
+            margin-top: 30px;
+
+        }
+        #fly {
+            width: 300px;
+            height: 150px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        #scandal {
+            width: 300px;
+            height: 150px;
+            margin-top: 70px;
+        }
+        #flyText {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 75px;
+            margin-top: 10px;
+        }
+        #scandalText {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        #rightPowers {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            width: 500px;
+            height: 400px;
+            margin-left: 120px;
+            margin-top: 30px;
+
+        }
+        #act {
+            width: 300px;
+            height: 150px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        #star {
+            width: 300px;
+            height: 150px;
+            margin-top: 70px;
+        }
+        #actText {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 75px;
+            margin-top: 10px;
+        }
+        #starText {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        #partwithMissions {
+            background-color: black;
+            width: 100%;
+            height: 1700px;
+        }
+        
+        #mission1 {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            width: 1000px;
+            height: 500px;
+            margin-left: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+        #titleMission1 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            
+        }
+        #textPictureMission1 {
+            display: flex;
+            flex-direction: row;
+        }
+        #textMission1 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            width: 500px;
+            line-height: 1.5;
+            margin-top: 120px;
+            margin-left: 40px;
+        }
+        #imageFamous {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        #famous {
+            height: 200px;
+            width: 400px;
+            margin-top: 60px;
+        }
+        #mission2 {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            width: 1000px;
+            height: 500px;
+            margin-left: 240px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+        }
+        #titleMission2 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #textPictureMission2 {
+            display: flex;
+            flex-direction: row;
+        }
+        #textMission2 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            width: 500px;
+            line-height: 1.5;
+            margin-top: 120px;
+            margin-left: 40px;
+        }
+        #imageDaughter {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        #daughter {
+            height: 200px;
+            width: 400px;
+            margin-top: 100px;
+        }
+        #mission3 {
+            background-color: black;
+            border-width: 0.1px;
+            border-color: red;
+            border-radius: 40px;
+            border-style: solid;
+            width: 1000px;
+            height: 500px;
+            margin-left: 240px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+        }
+        #titleMission3 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #textPictureMission3 {
+            display: flex;
+            flex-direction: row;
+        }
+        #textMission3 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            width: 500px;
+            line-height: 1.5;
+            margin-top: 120px;
+            margin-left: 40px;
+        }
+        #imageRole {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        #role {
+            height: 200px;
+            width: 400px;
+            margin-top: 100px;
+        }
+        #footer {
+            width: 100%; 
+            height: 300px;
+            background-color: black;       
+        }
+        #footerTitle{
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contacts {
+            margin-top: 20px;
+            margin-left: 240px;
+            display: flex;
+            flex-direction: row;
+        }
+        #kitonPhoto {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        #kiton {
+            height: 100px;
+            width: 100px;
+        
+        }
+        #emmaPhoto {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        #emma {
+            height: 100px;
+            width: 100px;
+        
+        }
+        #nortonPhoto {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        #norton {
+            height: 100px;
+            width: 100px;
+        
+        }
+        #zakPhoto {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        #zak {
+            height: 100px;
+            width: 100px;
+        
+        }
+        #naomiPhoto {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            
+        }
+        #naomi {
+            height: 100px;
+            width: 100px;
+        
+        }
+        #more {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: right;
+            margin-right: 290px;
+            margin-top: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="fullscreen-div">
+        <div id="title">Профиль супергероя</div>
+        <div id="contents">
+            <ol id="contentsList">
+                <li>Основная информация</li>
+                <li>Суперспособности</li>
+                <li>Миссии</li>
+                <li>Контакты</li>
+            </ol>
+        </div>
+        <div id="generalInfo">
+            <div id="info">
+                <ul id="infoList">
+                    <li>Имя: Бердмэн</li>
+                    <li>Настоящее имя: Ригган Томсон</li>
+                    <li>Возраст: 60 лет</li>
+                    <li>Город: Нью Йорк</li>
+                </ul>
+            </div>
+            <img src="image (1).png" alt="" id="poster">
+        </div>
+        <div id="partWithPowers">
+            <div id="powers">
+                <div id="powerTitle">Суперспособности</div>
+                <div id="allPowers">
+                <div id="leftPowers">
+                    <img src="image (2).png" alt="Умеет летать" id="fly">
+                    <div id="flyText">Умеет летать</div>
+                      
+                    <img src="image (3).png" alt="" id="scandal">
+                    <div id="scandalText">Ссорится с критиками</div>
+                </div>
+                <div id="rightPowers">
+                    <img src="image (5).png" alt="Умеет летать" id="act">
+                    <div id="actText">Играет в театре</div>
+                      
+                    <img src="image (6).png" alt="" id="star">
+                    <div id="starText">Стал звездой ютуба</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="partwithMissions">
+            <div id="mission1">
+                <div id="titleMission1">Миссия 1 - Снова обрести славу</div>
+                <div id="textPictureMission1">
+                    <div id="textMission1">Бердмэн хочет запомниться человечеству не только как супергерой, но и как драматический актер театра и снова стать известным.</div>
+                    <figure id="imageFamous">
+                        <img src="image (7).png" alt="Image" id="famous">
+                        <figcaption>Статус: выполнена</figcaption>
+                      </figure>
+                </div>
+            </div>
+            <div id="mission2">
+                <div id="titleMission2">Миссия 2 - Наладить отношения с дочерью</div>
+                <div id="textPictureMission2">
+                    <div id="textMission2">У Бердмэна с дочерью непростые отношения, так как он большую часть времени посвящал своей карьере. Теперь он хочет наверстать упущенное время.</div>
+                    <figure id="imageDaughter">
+                        <img src="image (8).png" alt="Image" id="daughter">
+                        <figcaption>Статус: выполнена</figcaption>
+                      </figure>
+                </div>
+            </div>
+            <div id="mission3">
+                <div id="titleMission3">Миссия 3 - Перестать быть заложником одной роли</div>
+                <div id="textPictureMission3">
+                    <div id="textMission3">Бердмэна преследует образ своего альтер эго - человек-птица. Настало время проявить себя с другой стороны и вспомнить, кто он на самом деле.</div>
+                    <figure id="imageRole">
+                        <img src="image (9).png" alt="Image" id="role">
+                        <figcaption>Статус: выполнена</figcaption>
+                      </figure>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerTitle">Контакты</div>
+            <div id="contacts">
+                <figure id="kitonPhoto">
+                    <img src="китон.png" alt="Image" id="kiton">
+                    <figcaption>+79123454433</figcaption>
+                  </figure>
+                  <figure id="emmaPhoto">
+                    <img src="эмма.png" alt="Image" id="emma">
+                    <figcaption>+79134565544</figcaption>
+                  </figure>
+                </figure>
+                <figure id="nortonPhoto">
+                  <img src="нортон.png" alt="Image" id="norton">
+                  <figcaption>+79169876644</figcaption>
+                </figure>
+                <figure id="zakPhoto">
+                    <img src="зак.png" alt="Image" id="zak">
+                    <figcaption>+78263458877</figcaption>
+                  </figure>
+                </figure>
+                <figure id="naomiPhoto">
+                    <img src="наоми.png" alt="Image" id="naomi">
+                    <figcaption>+79163458865</figcaption>
+                  </figure>
+            </div>
+            <div id="more">Подробнее</div>
+        </div>
+        
+    </div>
+    <script>
+        let more = document.querySelector("#more")
+        more.addEventListener("click", function() {
+            window.open('https://ru.wikipedia.org/wiki/%D0%91%D1%91%D1%80%D0%B4%D0%BC%D1%8D%D0%BD');
+
+        })
+    </script>
+</body>
+</html>
+

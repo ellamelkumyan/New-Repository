@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*let books = [
+    "green", "blue", "red",
+]
+console.log(books[1])
+for (let i = 0; i<books.length; i++) {
+    console.log(books[i])
+}
+for (let i in books) {
+    console.log(i)
+}
+
+books.push("grey", "pink")
+console.log(books)
+books.pop()
+console.log(books)
+books.unshift("yellow")
+console.log(books)
+books.shift()
+console.log(books)
+
+let buttons = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+console.log(buttons[1][2])
+
+
+
+let genres = [
+    "comedy", "drama", "sci-fi", "documentary",
+]
+let start = genres.splice(0, 2)
+genres.unshift("animals")
+genres.unshift(start[0], start[1]) 
+genres[genres.length / 2] = "animals"
+console.log(genres)
+
+let genres = [
+"comedy", "drama", "sci-fi", "documentary",
+]
+genres.slice(0)
+let copy = genres.slice(0)
+
+let numbers = [
+    1, 2, 3, 4, 5
+]
+
+let x = genres.concat(numbers)
+genres.concat(numbers)
+console.log(x)*/
+
+
+
+/*let days = [
+    "Monday", "Tuesday", "Wednesday", "Tuesday",
+]
+days.forEach(function (item, index, array) {
+    console.log(item)
+    console.log(index)
+    console.log(array)
+    if (item === "Monday") {
+        console.log(item)
+    }
+})
+
+
+console.log(days.includes("Friday"))
+
+console.log(days.indexOf("Wednesday"))
+
+console.log(days.lastIndexOf("Monday"))
+
+let x = days.find(function (item) {
+return item == "Monday"
+
+
+
+})
+console.log(x)
+
+let users = [
+    {
+        id: 10,
+        name: "Vasya",
+    },
+    {
+        id: 11,
+        name: "John",
+
+    },
+    {
+        id: 12,
+        name: "Sam",
+
+    }
+]
+let tenUser = users.filter(function (item, index, array) {
+return item.id <= 11
+
+})
+console.log(tenUser)*/
+
+
+/*let numbers = [
+    11, 200, 3, 1786,
+]
+function compare (current, next) {
+    if (current < next) {
+        return - 1
+    }
+    else if(current > next) {
+        return 1
+    }
+    else {
+        return 0
+    }
+}
+numbers.sort(compare)
+alert(numbers)
+
+
+let numbers = [
+    11, 200, 3, 1786, ]
+
+ numbers.reverse()
+ console.log(numbers)
+
+ let text = "Abra, kadabra, hello, word"
+ let array = text.split(",")
+console.log(array)
+console.log(array.join("*"))*/
+
+
+/*var vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+let newVeg = vegetables.slice(0)
+newVeg.pop()
+console.log(newVeg)*/
+
+/*let number = prompt("Введите номер телефона")
+function getNumber (number) {
+    let newNumber = number.toString()
+    let result = [newNumber[0]]
+    for (let i = 1; i <= newNumber.length - 1; i++) {
+        if ((newNumber[i] % 2 !== 0) && (newNumber[i-1] % 2 !== 0)) {
+    result.push("-", newNumber[i])
+    console.log(result)
+        }
+        else {
+            result.push(newNumber[i])
+            console.log(result)
+        }
+    }
+}
+getNumber(number)*/
+
+
+
+/*let word = prompt("Введите слово")
+function changeWord (word) {
+    let upper = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+    let lower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    let result = []
+    for (let i = 0; i < word.length; i++) {
+        if (upper.includes(word[i])) {
+            result.push(word[i].toLowerCase())
+        }
+        else {
+            result.push(word[i].toUpperCase())
+        }
+    }
+    return result.join("")
+}
+console.log(changeWord(word))*/
+
+
+/*const words = ["apples", "grapes", "orange", "banana"]
+function changeWords (words) {
+    let joinedWords = words.join(", ")
+let upper = joinedWords.toUpperCase()
+console.log(upper)
+}
+changeWords (words)*/
+
+
+
+/*let numbers = [1, 2, 3, 4, 5]
+let numbers2 = numbers.splice(0, 2)
+let numbers3 = numbers.unshift(100, 200)
+console.log(numbers)*/
+
+/*const phrases = ["hello", "word", "javascript"] 
+function changeTheWord (phrases) {
+    let result = []
+    for (let i = 0; i < phrases.length; i++) {
+let newPhrase = phrases[i].slice(0, 3)
+console.log(newPhrase)
+    }
+}
+changeTheWord (phrases)*/
+
+
+/*const arr1 = ["apple", "banana", "orange"]
+const arr2 = ["grape", "melon", "pineapple"]
+let newArr = arr1.concat(arr2) 
+let arr3 = newArr.join("-")
+console.log(arr3.toUpperCase())*/
+
+
+/*let days = [
+    "Monday", "Tuesday", "Wednesday", "Tuesday",
+]
+days.forEach(function (item, index, array) {
+    console.log(item)
+    console.log(index)
+    console.log(array)
+    if (item === "Monday") {
+        console.log(item)
+    }
+})*/
+
+/*let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+let users = [vasya, petya, masha]
+function sortByAge (users) {
+    function compare (a, b) {
+        if (a.age>b.age) {return 1}
+        else if (a.age<b.age) {return -1}
+        else {return 0}
+    }
+    let x = users.sort(compare)
+    
+    x = x.map(function(item, index, array) {
+        return item.name
+        
+
+    })
+    console.log(x)
+}
+sortByAge(users)*/
+
+
+
+/*let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya = { name: "Петя", surname: "Иванов", id: 2 };
+let masha = { name: "Маша", surname: "Петрова", id: 3 };
+let users = [ vasya, petya, masha]
+let usersMapped = { id: vasya.id, fullName: vasya.name + " " + vasya.surname}
+console.log(usersMapped)
+let usersMapped2 = { id: petya.id, fullName: petya.name + " " + petya.surname}
+console.log(usersMapped2)
+let usersMapped3 = { id: masha.id, fullName: masha.name + " " + masha.surname}
+console.log(usersMapped3)*/
+
+
+
+
+
+
+/*let words = [
+    "table", "chair", "computer", "bed", "chair", "bed"
+]
+
+let newWords = {
+
+}
+for (let i in words) {
+    newWords [words[i]] = "word2"
+}
+console.log(newWords)
+
+let words3 = [
+
+]
+for (let i in newWords) {
+    words3.push(i)
+}
+console.log(words3)*/
+
+
+/*let number1 = +prompt("Введите первое число")
+let number2 = +prompt("Введите второе число")
+function checkNumber (number1, number2) {
+    let result = []
+    for (let i = number1; i < number2; i++) {
+        if (i % 4 === 0) {
+        result.push(i)
+        console.log(result)
+    }
+    
+    
+}
+}
+checkNumber (number1, number2)*/
+
+
+/*let numbers = [2, 432, 89, 1000]
+let userNumber = +prompt("Введите число")
+let newNumbers = numbers.slice(0, userNumber)
+console.log(newNumbers)
+let x = userNumber - numbers.length
+if (userNumber > numbers.length) {alert(`Не хватает ${x} чисел`)}*/
+
+
+
+/*let numbers = [2, 432, 89, 1000, 54, 12, 8]
+let userNumber = +prompt("Введите число")
+let x = 0
+for (let i = numbers.length - 1; x < userNumber; i--) {
+console.log(numbers[i])
+x++
+}*/
+
+
+
+
+
+/*var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [4, 5, 6];
+var result = []
+let x = arr1.forEach(function (item, index, array) {console.log(item)})
+let y = arr2.forEach(function (item, index, array) {console.log(item)})
+console.log(x+y)*/
+
+
+/*let numbers = [1, 2, 3]
+let newNumbers = []
+for (let i = 3; i>=1; i--) {
+    newNumbers = i
+    console.log(newNumbers)
+}*/
+
+
+/*const array = [2, 5, 9]
+array.splice(1, 1)
+console.log(array)*/
+
+
+/*const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.forEach(function(item) {
+    if (item === "Banana") {
+        console.log(fruits)
+    }
+    else {console.log(false)}
+})*/
+
+
+
+
+
+
+/*let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сетрябрь", "Октябрь", "Ноябрь", "Декабрь" ]
+
+let number = +prompt("Введите число")
+alert (months[number - 1])
+console.log (months[0])*/
+
+
+/*let numbers = [1, 2, 3, 4, 5]
+result = 0
+for (let i = 1; i<numbers.length; i++) {
+    result = result + i
+    console.log(result)
+}*/
+
+
+
+/*var obj = {
+    'Минск': 'Белорусь',
+    'Москва': 'Россия',
+    'Киев': 'Украина',
+}
+for (let i in obj) {
+    console.log(`${i} - это ${obj[i]}`)};*/
+
+
+    /*var obj = {
+    'Минск': 'Белорусь',
+    'Москва': 'Россия',
+    'Киев': 'Украина',
+}
+for (let i in obj) {
+    console.log(i + "- это " + obj[i])}*/
+
+/*const products = [
+  { name: "tomato", price: 10, delivery: 2 },
+  { name: "apple", price: 20, delivery: 2 },
+  { name: "orange", price: 30, delivery: 2 }
+];
+
+let sum = 0 
+for (let i = 0; i < products.length; i++) {
+    sum = sum + products[i].price
+    console.log(sum)
+}*/
+
+
+/*let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
+let monthsEng = ["January", "February", "March", "April", "May", "June", "July", "August"]
+let numbers = [] 
+for (let i = 1; i <=12; i ++ ) {numbers.push(i)}
+let x = prompt("Введите месяц")
+function checkMonth (months) {
+if (months.includes(x)) {
+    if (x === months[0] || x === months[1] || x === months[11]) {
+        alert("Это зима")
+    }
+    else if (x === months[2] || x === months[3] || x === months[4]) {
+        alert("Это весна")
+    }
+    else if (x === months[5] || x === months[6] || x === months[7]) {
+        alert("Это лето")}
+
+        else if (x === months[8] || x === months[9] || x === months[10]) {
+        alert("Это осень")}
+}
+}
+checkMonth (months)
+checkMonth (monthsEng)*/
+
+
+
+/*var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [4, 5, 6];
+
+if (arr1.length > arr2.length) {
+    let result = arr1.length - arr2.length 
+    console.log(result)
+    for (let i = 0; i < result; i++) {arr2.push(0)
+    }
+    console.log(arr2)
+    }
+    x = []
+for (let i = 0; i  < arr1.length; i++) {
+    x.push(arr1[i] + arr2[i])
+    
+}
+console.log(x)*/
+
+
+/*let names = ["John", "Ann", "Sam"]
+let word = prompt("Введите строку")
+let flag = false
+for (let i = 0; i < names.length; i++) {
+    if (word.includes(names[i])) {
+        flag = true
+        break
+    } 
+
+}
+ if (flag) {
+    alert("Содержит")
+ }
+ else {alert("Не содержит")}*/
+
+
+
+ /*function countIdentic(arr) {
+    let x = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.indexOf(arr[i]) != arr.lastIndexOf(arr[i])) {
+            x += 1;
+            let currentItem = arr[i];
+            arr = arr.filter(function(item) {
+                return item != currentItem;
+            });
+            i = -1; 
+        }
+    }
+
+    console.log(x);
+    return x;
+}
+
+countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]);*/
+
+
+
+/*let num1 = [1, 2, 3, 4, 5]
+let num2= [6, 7, 8, 9, 10]
+let x = num1.concat(num2)
+console.log(x)*/
+
+
+/*let arr = [1, 2, "cat", 4, "dog"]
+let newArr = []
+for (let i = 0; i <= arr.length; i++) 
+{if (typeof arr[i] === `string`) 
+    {
+        //console.log(arr[i])
+newArr.push(arr[i])
+    }
+    
+   
+}
+
+console.log(newArr.length)*/
+
+
+
+
+/*let arr = [3, 90, 43, 2, 84, 23, 16]
+function compare (a, b) {
+if (a<b) {return -1}
+else if (a>b) {return 1}
+else {return 0}
+}
+arr.sort(compare)*/
+
+
+/*let arr = [3, 90, 43, 2, 84, 23, 16]
+let newArr = []
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 70) {
+        newArr.push(arr[i])
+        
+    }
+
+
+}
+
+console.log(newArr)*/
+
+
+
+/*let num = [1, 2, 3, 5]
+num.map(function(item, index, array){
+    console.log(item * index)
+})*/
+
+
+/*let arr = ["cat", "dog", "fish", "cat", "dog", "snake"]
+let arr2 = []
+arr.filter(function(item, index) {
+    if (arr.indexOf(item) === index) {
+        arr2.push(item);
+    }
+});
+
+console.log(arr2)*/
+
+
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+let newNumbers = []
+for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        newNumbers.push(numbers[i])
+    }
+    else {newNumbers.unshift(numbers[i])}
+}
+console.log(newNumbers)*/
+
+
+/*var array1 = [5, 2, 1, -10, 8];
+var array2 = [5, 2, 1, -9, 3, 7]; 
+let arr3 = array1.concat(array2)
+console.log(arr3)
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3.indexOf(arr3[i]) === arr3.lastIndexOf(arr3[i]))  {
+        console.log(arr3[i])
+    }
+}*/
+
+
+/*var arr1 = [1, 2, 'a'];
+var arr2 = [1, 2, 3, 4, 'b']
+let arr3 = arr1.concat(arr2)
+console.log(arr3)
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3.indexOf(arr3[i]) === arr3.lastIndexOf(arr3[i])) {
+        console.log(arr3[i])
+    }
+}*/
+
+
+
+
+/*var arr1=[7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7]
+let obj = {}
+let count = 0
+let max = 0
+let result = ""
+for (let i = 0; i < arr1.length; i ++) {
+    
+    if (obj[arr1[i]] !== true) {
+        for (let j = i; j < arr1.length; j++) {
+            if (arr1[i] === arr1[j]) {
+                count ++
+            }
+        }
+        if (count > max) {
+            max = count
+            result = arr1[i] + "повторяется" + count
+        }
+        count = 0
+    } 
+    obj[arr1[i]] === true
+}
+alert(result)*/
+
+
+/*var arr1=[7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7];
+var controlObj = {};
+var count, max = 0;
+var output = "";
+
+for (var i = 0; i < arr1.length; i++) {
+
+  if(controlObj[arr1[i]] != true){
+    for (var j = i; j < arr1.length; j++) {
+      if(arr1[i] == arr1[j]){
+        count++;
+      }
+    }
+
+    if (count > max){
+      max = count;
+      output = arr1[i] + " повторяется " + count + " раз";
+    }
+    count = 0;
+  }
+  
+  controlObj[arr1[i]] = true;
+}
+console.log(output)*/
+
+
+
+/*let arr = ["a", "a", "a", "b", "b", "c"]
+let obj = {}
+for (let i = 0; i < arr.length; i ++) {
+    if (obj[arr[i]]) {
+        obj[arr[i]]++
+    }
+    else {
+        obj[arr[i]] = 1
+    }
+}
+console.log(obj)*/
+
+
+
+
+// Спроси ивана 
+//let arr = [1, false, '', 0, 'hello', NaN, 2, undefined]
+//arr = arr.filter(Boolean)
+//return !! item
+
+//console.log(arr)
+/*
+    if (arr[i] !== false) {
+        console.log(arr[i])
+    }
+*/
+
+
+
+
+
+
+
+/*let obj = {a: 1, b: 2, c:3}
+//console.log(Object.entries(obj))*
+let arr = ["a", "a", "b", "b", "b", "c"]
+let newObj = {}
+for (let i = 0; i < arr.length; i ++) {
+    newObj[arr[i]] = 1
+    if (newObj[arr[i]]) {
+        newObj[arr[i]] = newObj[arr[i]] + 1
+    }
+
+}
+console.log(newObj)*/
+
+
+
+
+/*var arr = [1, 6, 5, 2, 7, 5, 1, 4, 3, 9, 8, 11, 10, 18];
+let num = +prompt("Введите число")
+function couple (num, arr) {
+    for (let i = 0; i < arr.length; i ++) {
+        let x = num - arr[i]
+        //console.log(x) 
+        for (let y = i+1; y < arr.length; y++) {
+            if (arr[y] + arr[x] === num) {
+                console.log(arr[i], arr[y])
+            }
+        }
+    }
+}
+couple(num, arr)*/
+
+/*var arr = [1, 6, 5, 2, 7, 5, 1, 4, 3, 9, 8, 11, 10, 18];
+let num = +prompt("Введите число");
+
+function couple(num, arr) {
+    for (let i = 0; i < arr.length; i++) {
+        let x = num - arr[i];
+
+        for (let y = i + 1; y < arr.length; y++) {
+            if (arr[i] + arr[y] === num) {
+                console.log(arr[i], arr[y]);
+            }
+        }
+    }
+}
+
+couple(num, arr);*/
+
+
+
+
+//let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+/*let num = +prompt("Введите число")
+for (i = 0; i < arr.length; i ++) {
+    if (num === arr[i]) {
+        arr.splice(i, 1)
+    }
+}*/
+/*let x = arr[Math.floor(Math.random() * arr.length)]
+console.log(x)*/
+
+/*function changeArr (arr, from, to) {
+arr.splice(to, 1, arr.splice(from, 1)[0]) 
+return arr
+}
+console.log(changeArr(arr, 2, 4))*/
+
+
+
+
+/* Максимальное и минимальное 
+
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+let obj = {}
+
+function findMaxMin(arr) {
+    let max = Math.min()
+    let min = Math.max()
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+        if (arr[i] < min) {
+            min = arr[i]
+            
+        }
+    }
+
+    obj.max = max
+    obj.min = min
+}
+
+findMaxMin(arr);
+console.log(obj);
+*/
+
+
+
+
+
+/* Больше порога 
+let arr = [1, 7, 3, 9, 5];
+let threshold = 5
+function filterByThreshold (arr, threshold) {
+    return arr.filter(function(item){
+        return item > threshold
+        
+    })
+   
+}
+console.log(filterByThreshold(arr, threshold));*/
+
+
+
+
+/*var arr = [1, 2, 3, 3, 4, 3, 5]
+var newArr = []
+for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i]))  {
+        newArr.push(arr[i])
+       
+    }
+}
+console.log(newArr)*/
+
+
+/*var litmir = [ 
+   { author: 'Хэленка', title: 'Улетела сказка'},
+   { author: 'Коул Кресли', title: 'Восстание Аркан'},
+   { author: 'Райчел Мид', title: 'Золотая лилия'}
+   ];
+   let word = prompt()
+for (let i in litmir) {
+    for (let y in litmir[i]) {
+        if (litmir[i][y] === word && y == "author") {
+            console.log(litmir[i][y] + litmir[i].title)
+        }
+        else if (litmir[i][y] === word && y == "title") {
+            console.log(litmir[i][y] + litmir[i].author)
+        }
+        }
+    }*/
+
+
+
+
+/*var arr1 = ['Капуста', 'Капитал'];
+var arr2 = ['Репа', 'Редиска'];
+var arr3 = []
+function firstWords (arr) {
+for (let x = 0; x < arr[0].length; x++) {
+arr3.push(arr[0][x])
+}
+console.log(arr)
+for (let i in arr) 
+{
+    if (arr[i] == arr[0]) {continue}
+    for (let y = 0; y < arr[i].length; y ++) {
+        if (arr[i][y] === arr3[y]) {
+            console.log(arr[i][y])
+        }
+    }
+}
+}
+firstWords (arr2)*/
+
+
+
+/*let arr = [0, 1, 2, 3, 4, 5, 6]
+arr.splice(1, 1)
+console.log(arr)*/
+
+
+/*let arr = [0, 1, 2, 3, 4, 5, 6]
+let x = Math.floor(Math.random() * 6) + 0
+console.log(x)*/ 
+
+
+/*let arr = ["from", "hello", "hi", "to"]
+arr.splice(0, 1)
+arr.push("from")
+//console.log(arr)
+arr.splice(2, 1)
+arr.unshift("to")
+console.log(arr)*/ 
+
+
+/*let number = +prompt("Сколько ввести элементов?") //7
+let arr = []
+for (let i = 0; i < number; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+}
+console.log(arr)*/ 
+
+
+/*let numbers = [2, 3, 5, 7, 11, 13, 17]
+let numbers2 = []
+sum = 0
+for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i]
+    numbers2.push(sum)
+}
+console.log(numbers2)*/ 
+
+
+
+/*var arr = [0, 1, 2, 3, 4, 5, 6, 7]
+let num = Number(prompt("Введите число")) //6
+let x = 0
+for (let i = 0; i < arr.length; i++) {
+    for (let y = 0; y < arr.length; y++) {
+        if (arr[i] + arr[y] === num) {
+            console.log(arr[i], arr[y])
+            x++
+        }
+    }
+}
+if (x === 0) {
+     console.log("Совпадений нет")
+}*/ 
+
+
+/*var str = "Каждый охотник желает знать, где сидит фазан."  
+var arr2 = []
+str = str.split(" ")
+for (let i = 0; i < str.length; i++) {
+    for (let y = 0; y < str[i].length; y++) {
+        //console.log(str[i].split().splice(0, 1))
+        //console.log(str[i].split("").splice(0, 1))
+        
+
+    }
+    arr2.push(str[i][0])
+}
+
+console.log(arr2)*/ 
+
+
+var a = [1,2,3];
+var b = [4,5,6];
+var c = [7,8,9]; 
+var d = []
+for (let i in a) {
+    d.push(a[i])
+}
+for (let i in b) {
+    d.push(b[i])
+}
+for (let i in c) {
+    d.push(c[i])
+}
+
+/*function compare (a, b) {
+    if (a > b) {return -1}
+    else if (a < b) {return 1}
+    else {return 0}
+}
+d.sort(compare)
+console.log(d)*/ 
+
+/*let x = 0
+for (i in d) {
+    for (y in d) {
+        if (d[i] > d[y]) {
+
+        } 
+       
+    }
+    x++
+    console.log(d)
+}*/
+
+
+
+/*let cities = ["Moscow", "Rome", "Tokio", "Paris", "Berlin"]
+function compare (a, b) {
+    if (a < b) {
+        return -1
+    }
+    else if (a > b) {
+        return 1
+    }
+    else {
+        return 0
+    }
+}
+console.log(cities.sort(compare))*/
+
+
+
+
+   </script>
+</body>
+</html>

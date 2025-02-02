@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*let obj = {
+            name: "John",
+            age: 20,
+            city: {
+                street: "Tverskaya",
+                houseNumber: 12,
+            }
+        }
+        let clone = obj //связанный клон
+        clone.name = "Helen"
+        console.log(obj)
+
+        let clone2 = {}
+        for (let i in obj) {
+            clone2[i] = obj[i]
+        }
+        clone2.name = "Sam" //несвязанный клон
+        console.log(obj)
+
+        let clone3 = Object.assign({}, obj) //объект в объект связан (меняется), остальное нет
+        clone3.age = 30
+        clone3.city.street = "Tverskaya2"
+        console.log(obj)*/ 
+
+        /*let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+
+let user2 = Object.assign({}, user)
+
+let grow = setInterval(function(){
+    console.log(user2)
+return user2.sizes.height++
+}, 1000)*/ 
+
+
+
+/*const user = {
+  name: "Ella",
+  age: 30,
+  city: "Berlin"
+};
+
+let clonedUser = {}
+for (let i in user) {
+    clonedUser[i] = user[i]
+}
+clonedUser.age = 26
+console.log(clonedUser)
+console.log(user)*/ 
+
+
+
+/*const product = {
+  name: "Laptop",
+  details: {
+    brand: "Dell",
+    specs: {
+      ram: "16GB",
+      storage: "512GB SSD"
+    }
+  }
+};*/ 
+
+
+
+/*const product = {
+  name: "Laptop",
+  details: {
+    brand: "Dell",
+    specs: {
+      ram: "16GB",
+      storage: "512GB SSD"
+    }
+  }
+};
+const productClone = JSON.parse(JSON.stringify(product))
+productClone.details.specs.ram = "32GB"
+console.log(product)
+console.log(productClone)*/ 
+
+
+
+/*const obj1 = { a: 1, b: { c: 2 } };
+const obj2 = { a: 1, b: { c: 2 } };
+
+function areObjectsEqual(a, b) {
+  let count = 0
+  for (let i in a) {
+if (a[i] == b[i] || typeof a[i] == "object") {
+  count ++
+  //console.log(true)
+}
+}
+let  count2 = 0
+for (let i in a) {
+count2 ++
+}
+console.log(count)
+if (count == count2) {
+  console.log(true)
+}
+else {
+  console.log(false)
+}
+console.log(count2)
+}
+areObjectsEqual(obj1, obj2)*/ 
+
+
+
+
+/*const complexObject = {
+  name: "Project",
+  tasks: [
+    { id: 1, description: "Task 1", completed: false },
+    { id: 2, description: "Task 2", completed: true }
+  ],
+  settings: {
+    theme: "dark",
+    notifications: true
+  }
+};
+
+function deepClone(obj) {
+  let clone2 = {}
+  if (obj === null || obj === undefined) {
+    return obj
+  }
+  else {
+    let clone2 = obj
+    return clone2
+
+  }
+}
+console.log(deepClone(complexObject))*/ 
+
+/*class Person  {
+  constructor (name, age) {
+    this.name = name
+    this.age = age
+  }
+  showInfo () {
+    console.log(this.name, this.age)
+  }
+}
+class John extends Person {
+  constructor (name, age) {
+    super (name, age)
+  }
+  
+}
+let myPeson = new John ("John", "23")
+myPeson.showInfo()*/ 
+
+
+
+/*let user = {
+  name: "John",
+  age: 13
+}
+function makeArr (obj) {
+  let arr = Object.values(obj)
+  let values = Object.values(obj)
+  
+  return arr
+}
+console.log(makeArr (user))*/ 
+
+
+/*let arr = [1, 2, 4, 8]
+Array.prototype.sum = function () {
+  return this.reduce(function(a, b) {
+return a+b
+  }, 0)
+} 
+console.log(arr.sum())*/ 
+
+    </script>
+</body>
+</html>

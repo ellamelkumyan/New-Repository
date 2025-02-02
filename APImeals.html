@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>Получить рецепт</button>
+    <div></div>
+    
+    <script>
+let button = document.querySelector("button")
+button.addEventListener("click", function() {
+    let input = document.querySelector("input").value
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
+    .then((response) => {
+
+return response.json()
+.then((response) => {
+    
+    showMeal(response)
+    console.log(response)
+
+
+
+})
+.catch(function(error) {
+    console.error("Ошибка:", error)
+})
+})
+})
+
+function showMeal(x) {
+let div = document.querySelector("div")
+div.innerHTML = ""
+for (let i in x) {
+        for (let j in x[i]) {
+            console.log(x[i][j])
+            let recepe = x[i][j].strInstructions
+    let picture = x[i][j].strMealThumb
+    let innerDiv =  document.createElement("div")
+    innerDiv.innerHTML =`
+
+                    <div>
+                        <img src=${picture}></img>
+                        <p>Рецепт:</strong> ${recepe}</p>
+                        
+        
+                        
+                    </div>
+                    
+                `;
+                div.appendChild(innerDiv)
+                
+}
+        }
+    }
+    
+
+    </script>
+</body>
+</html>

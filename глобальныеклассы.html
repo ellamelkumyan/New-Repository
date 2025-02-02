@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let user = {
+            name: "John",
+            age: 20,
+        }
+
+        function userMaker (a, b) {
+            return {
+                name: a,
+                age: b
+
+
+
+            }
+        }
+        let functionUser = userMaker ("John", 20)
+
+        class User {
+            constructor (name, age) {
+                this.name = name
+                this.age = age
+            }
+
+        }
+
+        const myUser = new User ("John", 20)
+        if ((typeof user == typeof functionUser) && (typeof functionUser == typeof myUser)) {
+            console.log("они одинаковые")
+
+        }
+
+        try {a} catch (e) {console.log(e)} 
+        alert("Привет")
+
+        try {
+            setTimeout(function () {
+            console.log("Сработал try")}, 1000)
+        }
+        catch (ошибка) {console.log("Сработал catch")}
+        finally {{console.log("Сработал finally")}}*/ 
+
+
+        /*let number = +prompt()
+        function fibonacci (number) {
+
+            if (number < 0) {
+                throw new Error("Введите положительное число")
+            }
+            return number<=1?number:fibonacci(number-1)+fibonacci(number-2)
+            
+        }
+        let difference
+        let result 
+        let start = Date.now()
+        try {result=fibonacci(number)}
+        catch (ошибка) {result = 0
+            console.log(ошибка)
+        }
+        finally {difference = Date.now() - start}
+        console.log(result)
+        console.log(difference)*/ 
+
+
+
+        /*class Error {
+            constructor (message) {
+                this.message = message
+                this.name = "error"
+                this.stack = "stack"
+            }
+        }
+
+        class Input extends Error{
+            constructor (message) {
+            super(message)
+            this.name = "input"
+            }
+        
+        }
+        function test () {
+            throw new Input ("ой случилась ошибка")
+        }
+        try {test()}
+        catch (ошибка) {console.log(ошибка)}*/ 
+
+
+
+      /*class Calculator {
+            constructor (history) {
+                this.history = []
+            }
+            add (a, b) {
+                try {if (isNaN(a) || isNaN(b)) {
+                    throw new Error ("Операнд должен быть числом")
+                }
+                
+                this.result1 = a+b 
+                console.log(result1)
+                return this.result1
+            }
+                catch (error) {
+                    console.error("Ошибка:", error.message)
+                }
+                finally {
+                    console.log("Операция завершена")
+                }
+                }
+
+            
+            subtract (a, b) {
+                try {if (isNaN(a) || isNaN(b)) {
+                    throw new Error ("Операнд должен быть числом")
+                }
+                
+                this.result2 = a-b 
+                console.log(result2)
+                return this.result2
+            }
+                catch (error) {
+                    console.error("Ошибка:", error.message)
+                }
+                finally {
+                    console.log("Операция завершена")
+                }
+                }
+            
+            multiple (a, b) {
+                try {if (isNaN(a) || isNaN(b)) {
+                    throw new Error ("Операнд должен быть числом")
+                }
+                
+                this.result3 = a*b 
+                console.log(result3)
+                return this.result3
+            }
+                catch (error) {
+                    console.error("Ошибка:", error.message)
+                }
+                finally {
+                    console.log("Операция завершена")
+                }
+                }
+            
+            divide (a, b) {
+                try {if (b === 0) {
+                    throw new Error ("Нельзя делить на ноль")
+                }
+                
+                this.result4 = a/b 
+                console.log(result4)
+                return this.result4
+            }
+                catch (error) {
+                    console.error("Ошибка:", error.message)
+                }
+                finally {
+                    console.log("Операция завершена")
+                }
+                }
+                showHistory() {
+                    this.history.push(this.add(4,2))
+                    this.history.push(this.subtract(4,3))
+                    this.history.push(this.multiple(3, 2))
+                    this.history.push(this.divide(6, 2))
+                    return this.history
+                }
+            }
+
+            const myCalculator = new Calculator (4, 2)
+            console.log(myCalculator.showHistory())*/ 
+
+        
+
+           /* class Calculator {
+    constructor() {
+        this.history = []; // Инициализация истории операций
+    }
+
+    add(a, b) {
+        try {
+            if (isNaN(a) || isNaN(b)) {
+                throw new Error("Операнд должен быть числом");
+            }
+            const result = a + b;
+            this.history.push(`${a} + ${b} = ${result}`);
+            return result;
+        } catch (error) {
+            console.error("Ошибка:", error.message);
+            this.history.push(`Ошибка: ${error.message}`);
+        } finally {
+            console.log("Операция завершена");
+        }
+    }
+
+    subtract(a, b) {
+        try {
+            if (isNaN(a) || isNaN(b)) {
+                throw new Error("Операнд должен быть числом");
+            }
+            const result = a - b;
+            this.history.push(`${a} - ${b} = ${result}`);
+            return result;
+        } catch (error) {
+            console.error("Ошибка:", error.message);
+            this.history.push(`Ошибка: ${error.message}`);
+        } finally {
+            console.log("Операция завершена");
+        }
+    }
+
+    multiply(a, b) {
+        try {
+            if (isNaN(a) || isNaN(b)) {
+                throw new Error("Операнд должен быть числом");
+            }
+            const result = a * b;
+            this.history.push(`${a} * ${b} = ${result}`);
+            return result;
+        } catch (error) {
+            console.error("Ошибка:", error.message);
+            this.history.push(`Ошибка: ${error.message}`);
+        } finally {
+            console.log("Операция завершена");
+        }
+    }
+
+    divide(a, b) {
+        try {
+            if (isNaN(a) || isNaN(b)) {
+                throw new Error("Операнд должен быть числом");
+            }
+            if (b === 0) {
+                throw new Error("На ноль делить нельзя");
+            }
+            const result = a / b;
+            this.history.push(`${a} / ${b} = ${result}`);
+            return result;
+        } catch (error) {
+            console.error("Ошибка:", error.message);
+            this.history.push(`Ошибка: ${error.message}`);
+        } finally {
+            console.log("Операция завершена");
+        }
+    }
+
+    showHistory() {
+        return this.history.join("\n");
+    }
+}
+
+// Тестирование
+const myCalculator = new Calculator();
+myCalculator.add(4, 2);
+myCalculator.subtract(4, 3);
+myCalculator.multiply(3, 2);
+myCalculator.divide(6, 0);  // Тест на деление на ноль
+console.log(myCalculator.showHistory());*/ 
+
+
+        /*function add(a, b) {
+            try {
+                if (isNaN(a) || isNaN(b)) {
+                    throw new Error ("Операнд должен быть числом")
+
+            }
+
+            const result = a + b
+            console.log(result)
+        }
+        catch (error) {
+            console.error("Ошибка:", error.message)
+        }
+           finally {
+            console.log("Операция завершена")
+           }
+        }
+
+        add(4, "f")
+
+        function divide(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error ("На ноль нельзя делить")
+
+            }
+
+            const result = a/b
+            console.log(result)
+        }
+        catch (error) {
+            console.error("Ошибка:", error.message)
+        }
+           finally {
+            console.log("Операция завершена")
+           }
+        }
+
+        divide(4, 0)*/ 
+
+
+
+        /*class Library {
+            constructor () {
+                this.books = []
+
+            }
+            addBook(book) {
+                try {
+                    if (typeof book !== "object" || !book.title || !book.year || !book.author) {
+                        throw new Error ("Некорректные данные книги")
+
+                    }
+                    let existingBook = this.books.find (function(item) {
+                        return item.title === book.title && item.author === book.author
+                    })
+                    if (existingBook) {
+                        throw new Error ("Книга уже добавлена")
+                    }
+                    this.books.push(book)
+                    console.log(`${book.title} добавлена`)
+
+
+                }
+                catch(error) {
+                    console.error("Ошибка:", error.mesage)
+
+                }
+            }
+            removeBook(title) {
+                try { let index = this.books.findIndex(function(item){
+                   return item.title == title
+                })
+                    if (index < 0) {
+                        throw new Error ("Не найдено")
+                    }
+                    let removedBook = this.books.splice(index, 1)[0]
+                    console.log("Удалили", removedBook.title)
+
+                }
+                catch (error) {
+                    console.error ("Ошибка:", error.mesage)
+                }
+            }
+            showLibrary() {
+        try {
+            if (library.length = 0) {
+                throw new Error ("Библиотека пуста")
+            }
+            for (let book of this.books) { 
+                console.log(`"${book.title}" от ${book.author}, ${book.year}`)
+            
+        }
+    }
+        catch (error) {
+    console.error(error.message);
+}
+            }
+            findBook(requestUser) {
+                try {let foundBook = this.books.find(function(item) {
+                    return item.title == requestUser 
+                    if (!foundBook) {
+                        throw new Error ("Книга не найдена")
+                    }
+                    return foundBook
+                })
+            }
+            catch (error) {
+                    console.error ("Ошибка:", error.message)
+                    return null
+                }
+           
+            }
+        }
+
+        const library = new Library();
+
+try {
+    library.addBook({ title: "1984", author: "George Orwell", year: 1949 });
+    library.addBook({ title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 });
+    library.addBook("Some Invalid Data");  // Пример ошибки
+} catch (error) {
+    console.error(error.message);
+}
+
+
+    
+
+
+try {
+    library.removeBook("The Great Gatsby");  // Пример ошибки
+} catch (error) {
+    console.error(error.message);
+}
+
+
+try {
+    library.showLibrary()
+}
+catch (error) {
+    console.error(error.message);
+}
+
+
+
+    
+
+
+    console.log(library)*/ 
+
+
+
+    /*function changeString () {
+        let string = prompt()
+        try {
+            if (typeof string !== "number") {
+                throw new Error ("Это не число")
+            }
+            console.log(string.toString())
+        }
+        catch (error) {
+            console.error("Ошибка", error.message)
+        }
+        
+    }
+    changeString ()*/ 
+
+
+
+    /*let arr = [{price: 100, quantity: 2}, {price: 200, quantity: 4}]
+    function calculateTotal (arr) {
+        let sum = 0
+        let result = 0
+        try {
+            if (!Array.isArray(arr)) {
+                throw new Error ("Неверный формат")
+            }
+            arr.forEach(function(item) {
+                try {
+            if (typeof item.price !== "number" || typeof item.quantity !== "number") {
+                throw new Error ("Не число")
+            }
+            
+            for (let i in arr) {
+            
+        result = result + (arr[i].price * arr[i].quantity) }
+        console.log(result)
+        }
+        catch (error) {
+            console.error("Ошибка", error.message)
+        }
+
+            })
+        }
+        catch (error) {
+            console.error("Ошибка", error.message)
+            return null
+        }
+
+       console.log(sum)
+       return result
+
+
+    }
+    calculateTotal (arr)*/ 
+
+
+
+   /* let arr = [{price: 100, quantity: 2}, {price: 200, quantity: 4}];
+
+function calculateTotal(arr) {
+    let sum = 0;
+    try {
+        if (!Array.isArray(arr)) {
+            throw new Error("Неверный формат");
+        }
+        arr.forEach(function(item) {
+            try {
+                if (typeof item.price !== "number" || typeof item.quantity !== "number") {
+                    throw new Error("Не число");
+                }
+              
+                let result = item.price * item.quantity;
+                sum += result;
+                console.log("Произведение:", result);
+            }
+            catch (error) {
+                console.error("Ошибка в элементе:", error.message);
+            }
+        });
+    }
+    catch (error) {
+        console.error("Ошибка в массиве:", error.message);
+        return null;
+    }
+
+    console.log("Общая сумма:", sum);
+    return sum;
+}
+
+calculateTotal(arr);*/ 
+
+
+let arr = [{price: 100, quantity: 2}, {price: 200, quantity: 4}];
+
+function calculateTotal(arr) {
+    let sum = 0; 
+    try {
+        if (!Array.isArray(arr)) {
+            throw new Error("Неверный формат");
+        }
+        arr.forEach(function(item) {
+            try {
+                if (typeof item.price !== "number" || typeof item.quantity !== "number") {
+                    throw new Error("Не число");
+                }
+              
+                sum += item.price * item.quantity;
+            }
+            catch (error) {
+                console.error("Ошибка в элементе:", error.message);
+            }
+        });
+    }
+    catch (error) {
+        console.error("Ошибка:", error.message);
+        return null;
+    }
+
+    console.log("Общая сумма:", sum);
+    return sum;
+}
+
+calculateTotal(arr);
+    
+    </script>
+</body>
+</html>
